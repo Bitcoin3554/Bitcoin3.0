@@ -40,4 +40,6 @@ http://127.0.0.1/mine
 Crypto Pipo-Pay!
 
 ![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp)
+![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/01.bmp)
+![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/02.bmp)
 [Watch the Video](https://github.com/Pipo-Pay/crypito/raw/main/video.mp4)
