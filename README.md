@@ -22,4 +22,6 @@ Crypito Pipo-(Pay) é uma plataforma de pagamento inovadora que combina mineraç
 Crypito Pipo-Pay!
 
 ![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp)
+![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/01.bmp)
+![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/02.bmp)
 [Assistir ao Vídeo](https://github.com/Pipo-Pay/crypito/raw/main/video.mp4)
