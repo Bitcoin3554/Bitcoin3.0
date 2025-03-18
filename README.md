@@ -1,6 +1,6 @@
 # Crypito Pipo-Pay
 
-Crypito Pipo-Pay é uma plataforma de pagamento inovadora que combina mineração de criptomoedas com transferências descentralizadas, oferecendo uma solução rápida, segura e eficiente para transações financeiras. Com um modelo de descentralização, a plataforma permite que os usuários realizem transações de forma direta e sem intermediários, tornando o processo de pagamento ainda mais transparente e seguro.
+Crypito Pipo-(Pay) é uma plataforma de pagamento inovadora que combina mineração de criptomoedas com transferências descentralizadas, oferecendo uma solução rápida, segura e eficiente para transações financeiras. Com um modelo de descentralização, a plataforma permite que os usuários realizem transações de forma direta e sem intermediários, tornando o processo de pagamento ainda mais transparente e seguro.
 
 ## Features
 
