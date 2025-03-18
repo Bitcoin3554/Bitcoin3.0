@@ -1,27 +1,43 @@
 # Crypito Pipo-Pay
 
-Crypito Pipo-(Pay) é uma plataforma de pagamento inovadora que combina mineração de criptomoedas com transferências descentralizadas, oferecendo uma solução rápida, segura e eficiente para transações financeiras. Com um modelo de descentralização, a plataforma permite que os usuários realizem transações de forma direta e sem intermediários, tornando o processo de pagamento ainda mais transparente e seguro.
+Crypito Pipo-(Pay) is an innovative payment platform that combines cryptocurrency mining with decentralized transfers, offering a fast, secure and efficient solution for financial transactions. With a decentralized model, the platform allows users to carry out transactions directly and without intermediaries, making the payment process even more transparent and secure.
 
 ## Features
 
-- **Mineração Descentralizada**: Utiliza a tecnologia de mineração baseada em QR Code, permitindo que qualquer usuário participe no processo de geração da criptomoeda sem a necessidade de equipamentos especializados.
-- **Transferência Descentralizada**: As transações são realizadas diretamente entre as partes, sem depender de intermediários ou instituições financeiras tradicionais.
-- **Pagamento Rápido e Seguro**: Transações rápidas e protegidas com criptografia avançada, garantindo a privacidade e segurança dos dados dos usuários.
-- **Interface Intuitiva**: A plataforma conta com um design simples e amigável, facilitando a interação do usuário.
-- **Compatibilidade com Criptomoedas**: Suporte a diversas criptomoedas, com integração para pagamentos e transferências.
+- **Decentralized Mining**: Uses QR Code-based mining technology, allowing any user to participate in the cryptocurrency generation process without the need for specialized equipment.
+- **Decentralized Transfer**: Transactions are carried out directly between the parties, without relying on intermediaries or traditional financial institutions.
+- **Fast and Secure Payment**: Fast and protected transactions with advanced encryption, ensuring the privacy and security of user data.
+- **Intuitive Interface**: The platform has a simple and user-friendly design, facilitating user interaction.
+- **Cryptocurrency Compatibility**: Support for multiple cryptocurrencies, with integration for payments and transfers.
 
-### Como funciona:
-  - **Mineração QR Code**: A mineração de criptomoedas é facilitada por meio de QR Codes, permitindo que os usuários ganhem tokens com facilidade.
-  - **Transferência Direta**: As transferências acontecem diretamente entre as carteiras dos usuários, sem a necessidade de intermediários, utilizando a tecnologia blockchain.
-  - **Descentralização**: Toda a rede é descentralizada, garantindo que nenhuma entidade centralizada tenha controle sobre as transações ou os saldos dos usuários.
+### How it works:
+- **QR Code Mining**: Cryptocurrency mining is facilitated through QR Codes, allowing users to easily earn tokens.
+- **Direct Transfer**: Transfers occur directly between users' wallets, without the need for intermediaries, using blockchain technology.
+- **Decentralization**: The entire network is decentralized, ensuring that no centralized entity has control over users' transactions or balances.
 
 ### Links:
-  - **Imagem**: `https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp`
-  - **Vídeo**: `https://github.com/Pipo-Pay/crypito/raw/main/video.mp4`
+Smart Contract
+http://127.0.0.1/contract/carteira/external-transactions
 
-Crypito Pipo-Pay!
+Balance
+http://127.0.0.1/balance/<address>
+
+New Transfer
+http://127.0.0.1/transactions/new
+
+Blocks
+http://127.0.0.1/chain
+
+Transfer
+http://127.0.0.1/transfer
+
+Carteras
+http://127.0.0.1/wallet/create
+
+Mining
+http://127.0.0.1/mine
+
+Crypto Pipo-Pay!
 
 ![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp)
-![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/01.bmp)
-![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/02.bmp)
-[Assistir ao Vídeo](https://github.com/Pipo-Pay/crypito/raw/main/video.mp4)
+[Watch the Video](https://github.com/Pipo-Pay/crypito/raw/main/video.mp4)
