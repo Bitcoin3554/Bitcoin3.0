@@ -38,7 +38,7 @@ Mining
 http://127.0.0.1/mine
 
 Crypto Pipo-Pay!
-
+![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/Pipo-(pay).jpg)
 ![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp)
 ![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/01.bmp)
 ![LiroBoy](https://github.com/Pipo-Pay/crypito/raw/main/02.bmp)
