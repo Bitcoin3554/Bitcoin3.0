@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Bitcoin/Pipo(pay) Wallet Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { background: #f8f9fa; }
+    .container { margin-top: 30px; }
+    .qr-img { width: 120px; height: 120px; }
+    .wallet-data { font-family: monospace; word-break: break-all; }
+    .data-block { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center mb-4">Bitcoin/Pipo(pay) Wallet Generator</h1>
+  
+  <!-- Formulário para inserir a chave privada -->
+  <form method="post" class="mb-4">
+    <div class="form-group">
+      <label for="privkey"><strong>Enter Private Key (HEX - 64 caracteres):</strong></label>
+      <input type="text" class="form-control" id="privkey" name="privkey" placeholder="Digite sua chave privada em HEX">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Gerar Carteira</button>
+  </form>
+
+  <!-- Exibe mensagens de erro/sucesso -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="mb-4">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  {% if wallet %}
+  <hr>
+  <h3 class="mt-4">Dados da Carteira</h3>
+  
+  <!-- Cada bloco de dados com QR Code -->
+  <div class="row data-block">
+    <div class="col-md-8 wallet-data">
+      <h5>Bitcoin/Pipo(pay) Address:</h5>
+      <p>{{ wallet.btc_address }}</p>
+    </div>
+    <div class="col-md-4">
+      <img src="data:image/png;base64,{{ wallet.qr_address }}" alt="QR Code Address" class="qr-img">
+    </div>
+  </div>
+  
+  <div class="row data-block">
+    <div class="col-md-8 wallet-data">
+      <h5>Bitcoin/Pipo(pay) Address Compressed:</h5>
+      <p>{{ wallet.btc_address_comp }}</p>
+    </div>
+    <div class="col-md-4">
+      <img src="data:image/png;base64,{{ wallet.qr_address_comp }}" alt="QR Code Address Compressed" class="qr-img">
+    </div>
+  </div>
+  
+  <div class="row data-block">
+    <div class="col-md-8 wallet-data">
+      <h5>Public Key (130 caracteres [0-9A-F]):</h5>
+      <p>{{ wallet.pubkey_uncomp }}</p>
+    </div>
+    <div class="col-md-4">
+      <img src="data:image/png;base64,{{ wallet.qr_pubkey_uncomp }}" alt="QR Code Public Key Uncompressed" class="qr-img">
+    </div>
+  </div>
+  
+  <div class="row data-block">
+    <div class="col-md-8 wallet-data">
+      <h5>Public Key (compressed, 66 caracteres [0-9A-F]):</h5>
+      <p>{{ wallet.pubkey_comp }}</p>
+    </div>
+    <div class="col-md-4">
+      <img src="data:image/png;base64,{{ wallet.qr_pubkey_comp }}" alt="QR Code Public Key Compressed" class="qr-img">
+    </div>
+  </div>
+  
+  <div class="row data-block">
+    <div class="col-md-8 wallet-data">
+      <h5>Private Key WIF (51 caracteres, começa com '5'):</h5>
+      <p>{{ wallet.priv_wif }}</p>
+    </div>
+    <div class="col-md-4">
+      <img src="data:image/png;base64,{{ wallet.qr_priv_wif }}" alt="QR Code Private Key WIF" class="qr-img">
+    </div>
+  </div>
+  
+  <div class="row data-block">
+    <div class="col-md-8 wallet-data">
+      <h5>Private Key WIF Compressed (52 caracteres, começa com 'K' ou 'L'):</h5>
+      <p>{{ wallet.priv_wif_comp }}</p>
+    </div>
+    <div class="col-md-4">
+      <img src="data:image/png;base64,{{ wallet.qr_priv_wif_comp }}" alt="QR Code Private Key WIF Compressed" class="qr-img">
+    </div>
+  </div>
+  
+  <div class="row data-block">
+    <div class="col-md-8 wallet-data">
+      <h5>Private Key Hexadecimal (64 caracteres [0-9A-F]):</h5>
+      <p>{{ wallet.priv_hex }}</p>
+    </div>
+    <div class="col-md-4">
+      <img src="data:image/png;base64,{{ wallet.qr_priv_hex }}" alt="QR Code Private Key Hexadecimal" class="qr-img">
+    </div>
+  </div>
+  
+  <div class="row data-block">
+    <div class="col-md-8 wallet-data">
+      <h5>Private Key Base64 (44 caracteres):</h5>
+      <p>{{ wallet.priv_b64 }}</p>
+    </div>
+    <div class="col-md-4">
+      <img src="data:image/png;base64,{{ wallet.qr_priv_b64 }}" alt="QR Code Private Key Base64" class="qr-img">
+    </div>
+  </div>
+  {% endif %}
+</div>
+</body>
+</html>
