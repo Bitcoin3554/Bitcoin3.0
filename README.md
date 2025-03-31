@@ -1,6 +1,6 @@
-# Crypito Pipo-Pay
+# Crypito Pipo-Pay And Bitcoin
 
-Crypito Bitcoin/Pipo(Pay) is an innovative payment platform that combines cryptocurrency mining with decentralized transfers, offering a fast, secure and efficient solution for financial transactions. With a decentralized model, the platform allows users to carry out transactions directly and without intermediaries, making the payment process even more transparent and secure.
+Pipo(Pay) Bitcoin is an innovative payment platform that combines cryptocurrency mining with decentralized transfers, offering a fast, secure and efficient solution for financial transactions. With a decentralized model, the platform allows users to carry out transactions directly and without intermediaries, making the payment process even more transparent and secure.
 
 ## Features
 
