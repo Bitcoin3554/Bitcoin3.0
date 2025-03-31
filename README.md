@@ -15,9 +15,13 @@ Crypito Pipo-(Pay) is an innovative payment platform that combines cryptocurrenc
 - **Direct Transfer**: Transfers occur directly between users' wallets, without the need for intermediaries, using blockchain technology.
 - **Decentralization**: The entire network is decentralized, ensuring that no centralized entity has control over users' transactions or balances.
 
+### Bitcoin/Pipo(pay) Wallet Generator
+http://127.0.0.1
+
 ### Links:
 Smart Contract
 http://127.0.0.1/contract/carteira/external-transactions
+![Pipo-Pay](https://github.com/Pipo-Pay/crypito/blob/main/Wallet.jpg)
 
 Balance
 http://127.0.0.1/balance/<address>
