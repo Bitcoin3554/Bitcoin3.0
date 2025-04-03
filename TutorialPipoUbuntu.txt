@@ -1,75 +1,75 @@
-📝 Tutorial: Como Usar o PipoPay no Ubuntu e Executar Arquivos .exe
-🔹 Passo 1: Atualizar o Sistema
-Antes de começar, atualize o Ubuntu para garantir que todos os pacotes estejam atualizados. Abra o terminal e execute:
+📝 Tutorial: How to use PipoPay on Ubuntu and run .exe files
+🔹 Step 1: Update the system
+Before you start, update Ubuntu to make sure all packages are up to date. Open the terminal and run:
 
-bash
-Copiar
-Editar
+hit
+Copy
+Edit
 sudo apt update && sudo apt upgrade -y
-🔹 Passo 2: Instalar o Wine (Para Rodar Arquivos .exe)
-O Ubuntu não executa arquivos .exe nativamente, mas podemos usar o Wine, um software que permite rodar aplicativos Windows no Linux.
+🔹 Step 2: Install Wine (To Run .exe Files)
+Ubuntu does not run .exe files natively, but we can use Wine, a software that allows you to run Windows applications on Linux.
 
-1️⃣ Instale o Wine com o seguinte comando:
+1️⃣ Install Wine with the following command:
 
-bash
-Copiar
-Editar
+hit
+Copy
+Edit
 sudo apt install wine64 -y
-2️⃣ Verifique a versão instalada:
+2️⃣ Check the installed version:
 
-bash
-Copiar
-Editar
+hit
+Copy
+Edit
 wine --version
-Se aparecer algo como wine-6.0 ou superior, a instalação foi bem-sucedida.
+If something like wine-6.0 or higher appears, the installation was successful.
 
-🔹 Passo 3: Baixar o PipoPay
-Agora, faça o download do instalador do PipoPay para Windows (.exe). Se o arquivo estiver compactado (.zip ou .rar), extraia-o primeiro:
+🔹 Step 3: Download PipoPay
+Now, download the PipoPay installer for Windows (.exe). If the file is compressed (.zip or .rar), extract it first:
 
-bash
-Copiar
-Editar
+hit
+Copy
+Edit
 unzip pipopay-installer.zip
-ou
+u
 
-bash
-Copiar
-Editar
+hit
+Copy
+Edit
 rar x pipopay-installer.rar
-🔹 Passo 4: Executar o PipoPay no Ubuntu
-Navegue até a pasta onde está o arquivo .exe e rode:
+🔹 Step 4: Run PipoPay on Ubuntu
+Navigate to the folder where the .exe file is located:
 
-bash
-Copiar
-Editar
+hit
+Copy
+Edit
 wine PipoPay.exe
-Se for um instalador, siga as instruções na tela para concluir a instalação.
+If you are an installer, follow the on-screen instructions to complete the installation.
 
-Caso o programa não funcione corretamente, tente rodá-lo no modo de compatibilidade:
+If the program does not work correctly, run it in a compatible mode:
 
-bash
-Copiar
-Editar
+hit
+Copy
+Edit
 WINEARCH=win32 WINEPREFIX=~/.wine32 wine pipo-pay-p2p.exe
-🔹 Passo 5: Criar um Atalho para o PipoPay
-Para facilitar o uso do PipoPay no Ubuntu, você pode criar um atalho no menu:
+🔹 Step 5: Create a Shortcut to PipoPay
+To make it easier to use PipoPay in Ubuntu, you can create a shortcut in the menu:
 
-bash
-Copiar
-Editar
+hit
+Copy
+Edit
 nano ~/.local/share/applications/pipopay.desktop
-Cole o seguinte conteúdo:
+Paste the following content:
 
-ini
-Copiar
-Editar
+this
+Copy
+Edit
 [Desktop Entry]
 Name=PipoPay
-Exec=wine /caminho/para/pipo-pay-p2p.exe
+Exec=wine /path/to/pipo-pay-p2p.exe
 Type=Application
-Icon=/caminho/para/icone.png
+Icon=/path/to/icon.png
 Categories=Finance;
-Salve (CTRL + X, depois Y e Enter). Agora o PipoPay aparecerá no menu de aplicativos.
+Save (CTRL + X, then Y and Enter). Now PipoPay will appear in the application menu.
 
-🎯 Conclusão
-Agora você pode rodar o PipoPay no Ubuntu sem problemas! Se houver erros, verifique a compatibilidade do Wine ou tente outra versão do programa. 🚀💰
+🎯 Conclusion
+Now you can run PipoPay on Ubuntu without any problems! If you encounter any errors, check Wine compatibility or try another version of the program. 🚀💰
