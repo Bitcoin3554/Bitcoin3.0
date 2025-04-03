@@ -29,20 +29,23 @@ Now, download the PipoPay installer for Windows (.exe). If the file is compresse
 hit
 Copy
 Edit
-unzip pipopay-installer.zip
-u
+Clone git https://github.com/Pipo-Pay/crypito.git
+CD crypito
+
+Now you are inside the project folder and can run commands to configure and run PipoPay.
+
+If you need more help setting up the project, let me know! 🚀💰
 
 hit
 Copy
 Edit
-rar x pipopay-installer.rar
 🔹 Step 4: Run PipoPay on Ubuntu
 Navigate to the folder where the .exe file is located:
 
 hit
 Copy
 Edit
-wine PipoPay.exe
+wine pipo-pay-p2p.exe
 If you are an installer, follow the on-screen instructions to complete the installation.
 
 If the program does not work correctly, run it in a compatible mode:
