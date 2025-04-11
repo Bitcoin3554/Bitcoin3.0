@@ -1,0 +1,78 @@
+📝 Tutorial: How to use PipoPay on Ubuntu and run .exe files
+🔹 Step 1: Update the system
+Before you start, update Ubuntu to make sure all packages are up to date. Open the terminal and run:
+
+hit
+Copy
+Edit
+sudo apt update && sudo apt upgrade -y
+🔹 Step 2: Install Wine (To Run .exe Files)
+Ubuntu does not run .exe files natively, but we can use Wine, a software that allows you to run Windows applications on Linux.
+
+1️⃣ Install Wine with the following command:
+
+hit
+Copy
+Edit
+sudo apt install wine64 -y
+2️⃣ Check the installed version:
+
+hit
+Copy
+Edit
+wine --version
+If something like wine-6.0 or higher appears, the installation was successful.
+
+🔹 Step 3: Download PipoPay
+Now, download the PipoPay installer for Windows (.exe). If the file is compressed (.zip or .rar), extract it first:
+
+hit
+Copy
+Edit
+Clone git https://github.com/Pipo-Pay/crypito.git
+CD crypito
+
+Now you are inside the project folder and can run commands to configure and run PipoPay.
+
+If you need more help setting up the project, let me know! 🚀💰
+
+hit
+Copy
+Edit
+🔹 Step 4: Run PipoPay on Ubuntu
+Navigate to the folder where the .exe file is located:
+
+hit
+Copy
+Edit
+wine pipo-pay-p2p.exe
+If you are an installer, follow the on-screen instructions to complete the installation.
+
+If the program does not work correctly, run it in a compatible mode:
+
+hit
+Copy
+Edit
+WINEARCH=win32 WINEPREFIX=~/.wine32 wine pipo-pay-p2p.exe
+🔹 Step 5: Create a Shortcut to PipoPay
+To make it easier to use PipoPay in Ubuntu, you can create a shortcut in the menu:
+
+hit
+Copy
+Edit
+nano ~/.local/share/applications/pipopay.desktop
+Paste the following content:
+
+this
+Copy
+Edit
+[Desktop Entry]
+Name=PipoPay
+Exec=wine /path/to/pipo-pay-p2p.exe
+Type=Application
+Icon=/path/to/icon.png
+Categories=Finance;
+Save (CTRL + X, then Y and Enter). Now PipoPay will appear in the application menu.
+
+🎯 Conclusion
+Now you can run PipoPay on Ubuntu without any problems! If you encounter any errors, check Wine compatibility or try another version of the program. 🚀💰
