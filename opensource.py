@@ -141,6 +141,46 @@ import pyopencl as cl
 from PyQt5 import QtCore
 from tqdm import tqdm
 import psutil
+import threading
+import hashlib
+import time
+
+# Configuração inicial
+target_prefix = "0000"  # Número de zeros desejado no início do hash
+base_text = "mensagem para minerar"
+found = False
+
+def miner(thread_id):
+    global found
+    nonce = 0
+    while not found:
+        # Concatena o texto base com o nonce
+        text = f"{base_text}{nonce}"
+        # Calcula o hash SHA-256
+        hash_result = hashlib.sha256(text.encode()).hexdigest()
+        if hash_result.startswith(target_prefix):
+            print(f"[Thread {thread_id}] Sucesso! Nonce: {nonce}, Hash: {hash_result}")
+            found = True
+            break
+        nonce += 1
+        if nonce % 100000 == 0:
+            print(f"[Thread {thread_id}] Ainda procurando... Nonce atual: {nonce}")
+    print(f"[Thread {thread_id}] Parando thread.")
+
+# Criar múltiplas threads
+threads = []
+num_threads = 4  # Número de threads desejado
+
+for i in range(num_threads):
+    t = threading.Thread(target=miner, args=(i,))
+    threads.append(t)
+    t.start()
+
+# Esperar todas as threads terminarem
+for t in threads:
+    t.join()
+
+print("Mineração concluída!")
 
 class MinerThread(QtCore.QThread):
     block_mined = QtCore.pyqtSignal(int, str)  # Sinal com 2 parâmetros (índice e hash do bloco anterior)
@@ -246,51 +286,89 @@ class MinerThread(QtCore.QThread):
             block_size = 64  # Tamanho do hash para SHA-256
 
             # Criar contexto e fila OpenCL
-            platforms = cl.get_platforms()
-            platform = platforms[0]
-            devices = platform.get_devices(device_type=cl.device_type.GPU)
-            if not devices:
-                raise Exception("Nenhum dispositivo GPU encontrado.")
-        
-            device = devices[0]
+            platform = cl.get_platforms()[0]
+            device = platform.get_devices()[0]
             context = cl.Context([device])
-            queue = cl.CommandQueue(context, device)
-        
-            # Criar o código OpenCL
-            program_src = """
-            __kernel void mine_block(__global const char* block_data, __global char* hash_result) {
-                // Função de hashing simples como exemplo (pode ser otimizada)
-                int id = get_global_id(0);
-                hash_result[id] = block_data[id];  // Exemplo simples de cópia
+            queue = cl.CommandQueue(context)
+
+            # Código OpenCL (kernel)
+            kernel_code = """
+            __constant char charset[] = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+            ulong rotate_right(ulong x, ulong n) {
+                return (x >> n) | (x << (64 - n));
+            }
+
+            // Função simples de hash (não é SHA256 real para simplificar)
+            ulong simple_hash(char *input, int length) {
+                ulong hash = 5381;
+                for (int i = 0; i < length; i++) {
+                    hash = ((hash << 5) + hash) + input[i];
+                }
+                return hash;
+            }
+
+            __kernel void mine(__global char *prefix, int prefix_len, ulong target, __global ulong *result, __global char *found_nonce) {
+                int gid = get_global_id(0);
+
+                char nonce[16];
+                int len = prefix_len;
+                for (int i = 0; i < 16; i++) {
+                    nonce[i] = charset[(gid >> (4 * i)) & 15];
+                }
+
+                char input[64];
+                for (int i = 0; i < prefix_len; i++) {
+                    input[i] = prefix[i];
+                }
+                for (int i = 0; i < 16; i++) {
+                    input[prefix_len + i] = nonce[i];
+                }
+
+                ulong hash = simple_hash(input, prefix_len + 16);
+
+                if (hash < target) {
+                    result[0] = hash;
+                    for (int i = 0; i < 16; i++) {
+                        found_nonce[i] = nonce[i];
+                    }
+                }
             }
             """
-        
-            program = cl.Program(context, program_src).build()
 
-            # Preparar buffers
-            block_data_buffer = cl.Buffer(context, cl.mem_flags.READ_ONLY | cl.mem_flags.COPY_HOST_PTR, hostbuf=block_data.encode('utf-8'))
-            hash_buffer = cl.Buffer(context, cl.mem_flags.WRITE_ONLY, block_size)
+            # Compila o kernel
+            program = cl.Program(context, kernel_code).build()
 
-            # Chamar a função OpenCL
-            program.mine_block(queue, (block_size,), None, block_data_buffer, hash_buffer)
+            # Dados de entrada
+            prefix = b"minerar"
+            target = 10000000  # Dificuldade simulada
 
-           # Ler o resultado
-            result = bytearray(block_size)
-            cl.enqueue_copy(queue, result, hash_buffer).wait()
+            # Buffers
+            mf = cl.mem_flags
+            prefix_buf = cl.Buffer(context, mf.READ_ONLY | mf.COPY_HOST_PTR, hostbuf=prefix)
+            result_buf = cl.Buffer(context, mf.WRITE_ONLY, 8)
+            nonce_buf = cl.Buffer(context, mf.WRITE_ONLY, 16)
 
-            # Exibir o hash minerado
-            hash_value = result.decode('utf-8')
-            print(f"Bloco minerado com sucesso usando GPU!")
-            print(f"Hash Minerado: {hash_value}")
-        
-            # Emitir o sinal com o hash minerado
-            self.block_mined.emit(block_info['index'], hash_value)
+            # Inicializa resultado
+            result = np.array([np.uint64(0xFFFFFFFFFFFFFFFF)], dtype=np.uint64)
 
-            # Exibir detalhes da GPU
-            self.show_gpu_details(device)
-        
-        except Exception as e:
-            print(f"Erro ao minerar com GPU: {e}")
+            # Executa kernel
+            global_size = (1024 * 64,)
+            start_time = time.time()
+
+            program.mine(queue, global_size, None, prefix_buf, np.int32(len(prefix)), np.uint64(target), result_buf, nonce_buf)
+
+            # Lê resultado
+            cl.enqueue_copy(queue, result, result_buf)
+            found_nonce = np.empty(16, dtype=np.byte)
+            cl.enqueue_copy(queue, found_nonce, nonce_buf)
+
+            end_time = time.time()
+
+            # Exibe resultado
+            print(f"Hash encontrado: {result[0]}")
+            print(f"Nonce encontrado: {found_nonce.tobytes().decode('ascii', errors='ignore')}")
+            print(f"Tempo de execução: {end_time - start_time:.4f} segundos")
 
     def mine_with_cpu(self, block_info):
         """Função de mineração usando CPU."""
