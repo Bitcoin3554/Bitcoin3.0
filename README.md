@@ -41,8 +41,8 @@ Mining
 http://127.0.0.1/mine
 
 Crypto Bitcoin!
-![Pipo-Pay](https://github.com/Pipo-Pay/crypito/raw/main/Pipo-(pay).jpg)
-![Pipo-Pay](https://github.com/Pipo-Pay/crypito/blob/main/Wallet.jpg)
-![Pipo-BMP](https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp)
+![itcoin3.0](https://github.com/Pipo-Pay/crypito/raw/main/Pipo-(pay).jpg)
+![itcoin3.0](https://github.com/Pipo-Pay/crypito/blob/main/Wallet.jpg)
+![Bitcoin3.0.bmp](https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp)
 ![01-BMP](https://github.com/Pipo-Pay/crypito/raw/main/01.bmp)
 ![02-BMP](https://github.com/Pipo-Pay/crypito/raw/main/02.bmp)
