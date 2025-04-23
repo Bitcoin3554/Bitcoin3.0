@@ -1,10 +1,6 @@
 # Crypito Bitcoin3.0 And Bitcoin
 
-<<<<<<< HEAD
-Pipo(Pay) Bitcoin is an innovative payment platform that combines cryptocurrency mining with decentralized transfers, offering a fast, secure and efficient solution for financial transactions. With a decentralized model, the platform allows users to carry out transactions directly and without intermediaries, making the payment process even more transparent and secure.
-=======
 Bitcoin3.0) Bitcoin is an innovative payment platform that combines cryptocurrency mining with decentralized transfers, offering a fast, secure and efficient solution for financial transactions. With a decentralized model, the platform allows users to carry out transactions directly and without intermediaries, making the payment process even more transparent and secure.
->>>>>>> 775583bc073be3755a75735e0440fd397e0d6ef1
 
 ## Features
 
@@ -44,19 +40,9 @@ http://127.0.0.1/wallet/create
 Mining
 http://127.0.0.1/mine
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Crypto Pipo-Pay!
-=======
 Crypto Bitcoin!
 ![Pipo-Pay](https://github.com/Pipo-Pay/crypito/raw/main/Pipo-(pay).jpg)
->>>>>>> 89c39d624a1fc15e9bbc5fb48856d73187caa614
-=======
-Crypto Bitcoin!
-![Pipo-Pay](https://github.com/Pipo-Pay/crypito/raw/main/Pipo-(pay).jpg)
->>>>>>> 775583bc073be3755a75735e0440fd397e0d6ef1
 ![Pipo-Pay](https://github.com/Pipo-Pay/crypito/blob/main/Wallet.jpg)
 ![Pipo-BMP](https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp)
 ![01-BMP](https://github.com/Pipo-Pay/crypito/raw/main/01.bmp)
 ![02-BMP](https://github.com/Pipo-Pay/crypito/raw/main/02.bmp)
-[Watch the Video](https://github.com/Pipo-Pay/crypito/raw/main/video.mp4)
