@@ -17,7 +17,7 @@ Bitcoin3.0) Bitcoin is an innovative payment platform that combines cryptocurren
 - 
 ### 🧱 Downloads
 
-- 📥 [Download do Minerador Bitcoin 3.0](https://github.com/Pipo-Pay/Bitcoin3.0/releases/download/v1.0.0-alpha/Bitcoin3.0-MinerP2p.exe)
+- 📥 [Download do Minerador Bitcoin 3.0](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v1.0.0-alpha)
 
 ### Bitcoin/Bitcoin3.0 Wallet Generator
 http://127.0.0.1
