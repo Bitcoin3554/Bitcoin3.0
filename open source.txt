@@ -447,21 +447,33 @@ class CryptoClient(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         self.node_url = None  # Stores the node URL
+<<<<<<< HEAD
         self.valid_node_url = 'Bitcoin3.0'  # Valid node URL
+=======
+        self.valid_node_url = 'http://pipo'  # Valid node URL
+>>>>>>> 775583bc073be3755a75735e0440fd397e0d6ef1
         self.initUI()
         self.miner_thread = MinerThread()
         self.miner_thread.block_mined.connect(self.update_mining_status)
         self.wallet_created = False
 
     def initUI(self):
+<<<<<<< HEAD
         self.setWindowTitle('Cliente Descentralizado de Criptomoeda  Bitcoin3.0')
+=======
+        self.setWindowTitle('Cliente Descentralizado de Criptomoeda  Pipo-(Pay)')
+>>>>>>> 775583bc073be3755a75735e0440fd397e0d6ef1
         self.setGeometry(100, 100, 400, 600)
 
         layout = QVBoxLayout()
 
         # Node URL input field
         self.node_input = QLineEdit(self)
+<<<<<<< HEAD
         self.node_input.setPlaceholderText('Digite o endereço do nó (Ex: Bitcoin3.0')
+=======
+        self.node_input.setPlaceholderText('Digite o endereço do nó (Ex: http://pipo')
+>>>>>>> 775583bc073be3755a75735e0440fd397e0d6ef1
         layout.addWidget(self.node_input)
 
         # Button to confirm the node URL
