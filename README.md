@@ -1,4 +1,4 @@
-# Crypito Pipo-Pay And Bitcoin
+# Crypito Bitcoin3.0 And Bitcoin
 
 Pipo(Pay) Bitcoin is an innovative payment platform that combines cryptocurrency mining with decentralized transfers, offering a fast, secure and efficient solution for financial transactions. With a decentralized model, the platform allows users to carry out transactions directly and without intermediaries, making the payment process even more transparent and secure.
 
@@ -15,7 +15,7 @@ Pipo(Pay) Bitcoin is an innovative payment platform that combines cryptocurrency
 - **Direct Transfer**: Transfers occur directly between users' wallets, without the need for intermediaries, using blockchain technology.
 - **Decentralization**: The entire network is decentralized, ensuring that no centralized entity has control over users' transactions or balances.
 
-### Bitcoin/Pipo(pay) Wallet Generator
+### Bitcoin/Bitcoin3.0 Wallet Generator
 http://127.0.0.1
 
 ### Links:
@@ -40,7 +40,7 @@ http://127.0.0.1/wallet/create
 Mining
 http://127.0.0.1/mine
 
-Crypto Pipo-Pay!
+Crypto Bitcoin!
 ![Pipo-Pay](https://github.com/Pipo-Pay/crypito/raw/main/Pipo-(pay).jpg)
 ![Pipo-Pay](https://github.com/Pipo-Pay/crypito/blob/main/Wallet.jpg)
 ![Pipo-BMP](https://github.com/Pipo-Pay/crypito/raw/main/pipo.bmp)
