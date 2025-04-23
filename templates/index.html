@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Bitcoin/Bitcoin3.0 Wallet Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #1e1e2f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      margin-top: 30px;
+      max-width: 800px;
+      background: #2a2d3e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+    }
+    .qr-img {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #ffc107;
+      padding: 5px;
+      background: #fff;
+      border-radius: 8px;
+    }
+    .wallet-data {
+      font-family: monospace;
+      word-break: break-all;
+      background: #3a3d4f;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .btn-primary {
+      background: #ffc107;
+      border: none;
+      color: #000;
+    }
+    .btn-primary:hover {
+      background: #ffdb58;
+    }
+    h5 {
+      color: #ffc107;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center mb-4">Bitcoin/Bitcoin3.0) Wallet Generator</h1>
+  
+  <form method="post" class="mb-4">
+    <div class="form-group">
+      <label for="privkey"><strong>Digite sua chave privada (HEX - 64 caracteres):</strong></label>
+      <input type="text" class="form-control" id="privkey" name="privkey" placeholder="Ex: 1A2B3C4D...">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Gerar Carteira</button>
+  </form>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="mb-4">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  {% if wallet %}
+  <hr>
+  <h3 class="mt-4 text-center">Dados da Carteira</h3>
+  
+  {% for label, key, qr in [
+    ("Endereço Bitcoin/Bitcoin3.0)", wallet.btc_address, wallet.qr_address),
+    ("Endereço Bitcoin/Bitcoin3.0) Comprimido", wallet.btc_address_comp, wallet.qr_address_comp),
+    ("Chave Pública (130 caracteres)", wallet.pubkey_uncomp, wallet.qr_pubkey_uncomp),
+    ("Chave Pública Comprimida (66 caracteres)", wallet.pubkey_comp, wallet.qr_pubkey_comp),
+    ("Chave Privada WIF (51 caracteres)", wallet.priv_wif, wallet.qr_priv_wif),
+    ("Chave Privada WIF Comprimida (52 caracteres)", wallet.priv_wif_comp, wallet.qr_priv_wif_comp),
+    ("Chave Privada Hexadecimal (64 caracteres)", wallet.priv_hex, wallet.qr_priv_hex),
+    ("Chave Privada Base64 (44 caracteres)", wallet.priv_b64, wallet.qr_priv_b64)
+  ] %}
+  <div class="row data-block mb-3">
+    <div class="col-md-8 wallet-data">
+      <h5>{{ label }}:</h5>
+      <p>{{ key }}</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="data:image/png;base64,{{ qr }}" alt="QR Code {{ label }}" class="qr-img">
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %}
+</div>
+</body>
+</html>
