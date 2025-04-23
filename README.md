@@ -14,6 +14,10 @@ Bitcoin3.0) Bitcoin is an innovative payment platform that combines cryptocurren
 - **QR Code Mining**: Cryptocurrency mining is facilitated through QR Codes, allowing users to easily earn tokens.
 - **Direct Transfer**: Transfers occur directly between users' wallets, without the need for intermediaries, using blockchain technology.
 - **Decentralization**: The entire network is decentralized, ensuring that no centralized entity has control over users' transactions or balances.
+- 
+### 🧱 Downloads
+
+- 📥 [Download do Minerador Bitcoin 3.0](https://github.com/Pipo-Pay/Bitcoin3.0/releases/download/v1.0.0-alpha/Bitcoin3.0-MinerP2p.exe)
 
 ### Bitcoin/Bitcoin3.0 Wallet Generator
 http://127.0.0.1
