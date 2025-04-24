@@ -1,6 +1,6 @@
-# Tutorial: How to Use Pipo System on Windows with CUDA and GPU Drivers
+# Tutorial: How to Use Bitcoin 3.0 System on Windows with CUDA and GPU Drivers
 
-## Step 1: Requirements to Run Pipo
+## Step 1: Requirements to Run Bitcoin 3.0
 
 First of all, check if your computer meets the following requirements:
 
@@ -8,7 +8,7 @@ First of all, check if your computer meets the following requirements:
 2. **CUDA Toolkit** (to use the GPU for mining).
 3. **Updated GPU Drivers**.
 
-**Pipo** needs these tools to run correctly and take advantage of the GPU's power for mining.
+**Bitcoin 3.0** needs these tools to run correctly and take advantage of the GPU's power for mining.
 
 ---
 
