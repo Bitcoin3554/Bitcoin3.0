@@ -11,7 +11,7 @@
 ## 📄 Whitepaper
 Para entender em detalhes o design, algoritmo de mineração, tokenomics e roadmap do Bitcoin3.0, consulte o whitepaper oficial:
 
-- [Whitepaper Bitcoin3.0 (PDF)]([https://example.com/whitepaper-bitcoin3.0.pdf](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf))
+- [Whitepaper Bitcoin3.0 (PDF)]([https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf)))
 
 ## 🧱 Downloads
 - 📥 **Minerador Bitcoin3.0:** [v1.0.0-alpha](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v1.0.0-alpha)
