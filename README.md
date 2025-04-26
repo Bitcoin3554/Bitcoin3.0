@@ -69,27 +69,6 @@ Bitcoin3.0 representa um novo passo para a evolução financeira descentralizada
 Combinando o melhor da infraestrutura Bitcoin e a inovação de uma nova blockchain, Bitcoin3.0 busca democratizar ainda mais o acesso às criptomoedas.
 
 Junte-se à revolução Bitcoin3.0!
-
-📜 FIM DO WHITEPAPER INICIAL
-🚀 Agora me fala:
-
-Quer que eu também formate isso em PDF bonitão para você divulgar?
-
-Quer que eu adicione um exemplo de tokenomics (como dividir a quantidade de moedas entre fundadores, investidores, mineração)?
-
-Quer colocar uma introdução mais "forte" e impactante para impressionar ainda mais?
-## Features
-
-- **Decentralized Mining**: Uses QR Code-based mining technology, allowing any user to participate in the cryptocurrency generation process without the need for specialized equipment.
-- **Decentralized Transfer**: Transactions are carried out directly between the parties, without relying on intermediaries or traditional financial institutions.
-- **Fast and Secure Payment**: Fast and protected transactions with advanced encryption, ensuring the privacy and security of user data.
-- **Intuitive Interface**: The platform has a simple and user-friendly design, facilitating user interaction.
-- **Cryptocurrency Compatibility**: Support for multiple cryptocurrencies, with integration for payments and transfers.
-
-### How it works:
-- **QR Code Mining**: Cryptocurrency mining is facilitated through QR Codes, allowing users to easily earn tokens.
-- **Direct Transfer**: Transfers occur directly between users' wallets, without the need for intermediaries, using blockchain technology.
-- **Decentralization**: The entire network is decentralized, ensuring that no centralized entity has control over users' transactions or balances.
 - 
 ### 🧱 Downloads
 
