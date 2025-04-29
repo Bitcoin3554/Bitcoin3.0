@@ -14,7 +14,7 @@ Para entender em detalhes o design, algoritmo de mineração, tokenomics e roadm
 * [Whitepaper Bitcoin3.0 (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf)
 * 
 ## 🧱 Downloads
-- 📥 **Minerador Bitcoin3.0:** [BTC3](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v3.0.0)
+- 📥 **Minerador Bitcoin3.0:** [Downloads Aqui](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v3.0.0)
 
 ## 🔧 Ferramentas
 ### Bitcoin / Bitcoin3.0 Wallet Generator
