@@ -1,121 +1,46 @@
-Crypito Bitcoin3.0 And Bitcoin
+# Crypito Bitcoin3.0 And Bitcoin
 
-🚀 Visão Geral do Funcionamento “Local” do Bitcoin3.0
+## 🚀 Visão Geral
 
-O Bitcoin3.0, conforme distribuído no repositório de Bitcoin3554, é uma implementação local (única máquina) que engloba:
+O Bitcoin3.0 (BTC3) é uma evolução do conceito original do Bitcoin (BTC), combinando a segurança comprovada do sistema de carteiras Bitcoin com uma blockchain independente e um mecanismo de mineração próprio.
 
-Block explorer próprio rodando como um servidor HTTP local.
+- **Compatibilidade de Carteiras:** Mesmos formatos de chaves públicas, privadas e WIF do Bitcoin.
+- **Blockchain Própria:** Rede separada que gera BTC3 em vez de BTC.
+- **Mineração Dual:** Uma carteira única pode minerar e armazenar BTC (na rede Bitcoin) e BTC3 (na rede Bitcoin3.0) simultaneamente.
+- **Transações Rápidas:** Blocos configuráveis para tempos de confirmação mais baixos (1–10 minutos).
 
-Minerador embutido que cria blocos “normais” usando prova de trabalho.
+## 📄 Whitepaper
 
-Carteira compatível com Bitcoin (BTC) — mesmas chaves privadas/WIF e formatos de endereço.
+Para entender em detalhes o design, algoritmo de mineração, tokenomics e roadmap do Bitcoin3.0, consulte o whitepaper oficial:
 
-Rede P2P restrita a 127.0.0.1 — não há peers externos; tudo acontece na sua máquina.
+- [Whitepaper Bitcoin3.0 (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf)
 
-A seguir, explicamos como cada componente se integra e como você pode ligar o executável e testar todas as funcionalidades.
+## 📥 Opções de Download
 
-1. Block Explorer e API HTTP Local
+Escolha a opção que melhor se adequa às suas necessidades:
 
-O whitepaper e o repositório incluem exemplos de endpoints REST para exploração de blocos e transações, todos apontando para 127.0.0.1:
+### 1. Executável Pré-Compilado (Windows)
 
-GET /chain        — retorna a cadeia de blocos atual.
-GET /block/{hash} — detalhes de um bloco específico.
-GET /tx/{txid}    — detalhes de uma transação.
+- Baixe o instalador completo para Windows:  
+  [Bitcoin3.0 Installer v3.0.0](https://github.com/Bitcoin3554/Bitcoin3.0/releases/download/v3.0.0/Bitcoin3_Installer.exe)
 
-Como usar:
+  O instalador inclui:
 
-Execute o Bitcoin3.0.exe (Windows) ou ./bitcoin3d (Linux).
+  - `Bitcoin3.0.exe` (cliente principal)
+  - `Bitcoin3.0-Miner.exe` (minerador)
+  - Arquivos de configuração e recursos gráficos
 
-Abra o navegador em http://127.0.0.1:3001 (porta default; verifique o README interno ou configs do executável).
+  Após a instalação, um atalho será criado na área de trabalho para iniciar ambos os programas simultaneamente.
 
-Acesse a interface web para navegar por blocos, transações e endereços.
+### 2. Código-Fonte (ZIP)
 
-2. Mineração “Normal” em Prova de Trabalho
+- Baixe o código-fonte completo em formato ZIP:  
+  [Bitcoin3.0 v3.0.0 - Código-Fonte](https://github.com/Bitcoin3554/Bitcoin3.0/archive/refs/tags/v3.0.0.zip)
 
-O módulo de mineração está embutido no executável e expõe o endpoint POST /mine:
+  Após o download, extraia o conteúdo e siga as instruções de compilação no arquivo `README.md` incluído.
 
-Fluxo de mineração:
+### 3. Clonagem via Git
 
-Envie uma requisição POST para /mine (ou use o botão "Mine" na UI).
-
-O nó procura o nonce válido e adiciona um novo bloco à cadeia local.
-
-A recompensa é creditada ao endereço definido nos parâmetros de gênese.
-
-Configuração de intervalos de bloco:
-
-No arquivo chainparams.cpp, ajuste o parâmetro nPowTargetSpacing para configurar o intervalo de bloco (entre 1 e 10 minutos):
-
-static const int64_t nPowTargetSpacing = 2 * 60; // Exemplo: 2 minutos
-
-Recompile o projeto após alterações.
-
-3. Carteira e Chaves Privadas Compatíveis com BTC
-
-O Bitcoin3.0 reutiliza o formato WIF/P2PKH do Bitcoin original, permitindo usar a mesma carteira e chaves privadas.
-
-Prefixos de endereços:
-
-base58Prefixes[PUBKEY_ADDRESS] = {23};  // endereços começam com ‘M’ (exemplo)
-base58Prefixes[SECRET_KEY]     = {151}; // WIF privado padrão
-
-Importação/Exportação:
-
-Use a opção "Import WIF" na interface local para carregar sua chave BTC existente.
-
-Endereços gerados serão reconhecidos por qualquer wallet compatível com aquele prefixo (e.g., Bitcoin Core).
-
-4. Rede P2P em 127.0.0.1
-
-Não existem DNS seeds nem peers públicos — toda a comunicação P2P é feita localmente.
-
-Configuração de peers:
-No arquivo bitcoin3.conf:
-
-listen=1
-bind=127.0.0.1
-port=8333
-addnode=127.0.0.1:8333
-
-Para conectar múltiplas instâncias, rode várias cópias do executável na mesma máquina.
-
-5. Passo a Passo para Testar Tudo na Sua Máquina
-
-Baixe e extraia o release v3.0.0 do GitHub.
-
-Execute Bitcoin3.0.exe (Windows) ou ./bitcoin3d (Linux) no diretório extraído.
-
-Explorer: acesse http://127.0.0.1:3001 para navegar blocos e txs.
-
-RPC Mineradora: acesse http://127.0.0.1:8332 (Console RPC).
-
-Importe sua chave WIF: via UI ou importprivkey <WIF> na console RPC.
-
-Inicie a mineração: curl -X POST http://127.0.0.1:8332/mine ou clicando no botão "Mine".
-
-Verifique no explorer o novo bloco e o saldo creditado.
-
-🔧 Recursos Adicionais
-
-Whitepaper Bitcoin3.0 (PDF):
-Bitcoin3.0_Whitepaper.pdf
-
-Repositório GitHub:
-https://github.com/Bitcoin3554/Bitcoin3.0
-
-Conclusão
-
-O Bitcoin3.0 (BTC3) oferece uma instância local customizada do protocolo Bitcoin para gerar BTC3, rodando exclusivamente em 127.0.0.1. Ele inclui:
-
-Explorer próprio via HTTP local
-
-Mineração PoW com bloco configurável
-
-Carteira BTC compatível e importação de chaves WIF
-
-Rede P2P isolada à sua máquina
-
-Este projeto é ideal para testes e aprendizado. Não há deployment em testnet/mainnet nem peers externos, portanto não representa uma criptomoeda com rede real nem liquidez.
-
-© 2025 Crypito Labs. Todos os direitos reservados.
-
+- Para obter o histórico completo do repositório, clone-o usando Git:  
+  ```bash
+  git clone https://github.com/Bitcoin3554/Bitcoin3.0.git
