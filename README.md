@@ -34,7 +34,7 @@ O **Bitcoin3.0** tem um minerador embutido que utiliza o algoritmo de **Prova de
 #### Configuração de Mineração:
 No arquivo **chainparams.cpp**, o parâmetro **nPowTargetSpacing** define o intervalo entre blocos (geralmente entre 1 e 10 minutos).
 
-Para alterar o intervalo, modifique o valor de `static const int64_t nPowTargetSpacing` e recompile o código.
+Para alterar o intervalo, modifique o valor de static const int64_t nPowTargetSpacing e recompile o código.
 
 ---
 
@@ -43,8 +43,8 @@ Para alterar o intervalo, modifique o valor de `static const int64_t nPowTargetS
 O **Bitcoin3.0** é compatível com as chaves privadas e endereços padrão do Bitcoin (BTC), utilizando o formato **WIF/P2PKH**. Isso permite importar e exportar chaves privadas de carteiras BTC.
 
 #### Prefixos de Endereços:
-- **Endereço Público (P2PKH)**: Prefixo `23` (exemplo: começa com "M").
-- **Chave Privada (WIF)**: Prefixo `151`.
+- **Endereço Público (P2PKH)**: Prefixo 23 (exemplo: começa com "M").
+- **Chave Privada (WIF)**: Prefixo 151.
 
 ---
 
@@ -55,7 +55,7 @@ A comunicação P2P no Bitcoin3.0 ocorre exclusivamente na sua máquina local (l
 #### Configuração de Rede:
 No arquivo de configuração **bitcoin3.conf**, a rede é configurada para aceitar conexões apenas de **127.0.0.1**.
 
-```ini
+ini
 listen=1
 bind=127.0.0.1
 port=80
