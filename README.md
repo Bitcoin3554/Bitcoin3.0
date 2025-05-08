@@ -1,113 +1,64 @@
 # Crypito Bitcoin3.0 And Bitcoin
 
-Visão Geral do Funcionamento “Local” do Bitcoin3.0
-O Bitcoin3.0, conforme distribuído no repositório de Bitcoin3554, é na prática uma implementação local (única máquina) que engloba:
+## Visão Geral
 
-Block explorer próprio rodando como um servidor HTTP local.
+O **Bitcoin3.0** é uma implementação local do protocolo Bitcoin, que roda em uma única máquina. Ele inclui um explorador de blocos próprio, mineração utilizando prova de trabalho (PoW), uma carteira compatível com o Bitcoin, e uma rede P2P restrita a **127.0.0.1** (localhost). Tudo ocorre localmente em sua máquina.
 
-Minerador embutido que cria blocos “normais” usando prova de trabalho.
+## Funcionalidades
 
-Carteira compatível com Bitcoin (BTC) — mesmas chaves privadas/WIF e formatos de endereço.
+### 1. Block Explorer e API HTTP Local
 
-Rede P2P restrita a 127.0.0.1 — não há peers externos; tudo acontece na sua máquina.
+O Bitcoin3.0 inclui um **explorador de blocos** e uma **API HTTP** para interação com a blockchain. A comunicação é feita via **127.0.0.1**, garantindo que a interação ocorra localmente. 
 
-A seguir, explico como cada componente se integra e como você pode “ligar o .exe” e testar essas funcionalidades.
+#### Endpoints da API:
+- **GET /chain**: Retorna a cadeia de blocos atual.
+- **GET /block/{hash}**: Detalhes de um bloco específico.
+- **GET /tx/{txid}**: Detalhes de uma transação específica.
 
-1. Block Explorer e API HTTP Local
-O whitepaper e o repositório incluem exemplos de endpoints REST para exploração de blocos e transações, todos apontando para 127.0.0.1 :
+#### Como usar:
+1. Execute o arquivo **Bitcoin3.0.exe** (Windows) ou **./bitcoin3d** (Linux).
+2. Abra o navegador em [http://127.0.0.1](http://127.0.0.1) para acessar a interface do explorador de blocos.
+3. Explore os blocos, transações e endereços diretamente na interface.
 
-GET /chain — retorna a cadeia de blocos atual.
+---
 
-GET /block/{hash} — detalhes de um bloco específico.
+### 2. Mineração com Prova de Trabalho (PoW)
 
-GET /tx/{txid} — detalhes de uma transação.
+O **Bitcoin3.0** tem um minerador embutido que utiliza o algoritmo de **Prova de Trabalho (PoW)**. Você pode gerar novos blocos na blockchain localmente.
 
-Como usar:
+#### Fluxo de Mineração:
+1. Envie uma requisição POST para o endpoint **/mine**.
+2. O nó tentará encontrar um nonce válido e, ao sucesso, adicionará um novo bloco à cadeia local.
+3. A recompensa pela mineração será creditada ao endereço especificado.
 
-Execute o Bitcoin3.0.exe.
+#### Configuração de Mineração:
+No arquivo **chainparams.cpp**, o parâmetro **nPowTargetSpacing** define o intervalo entre blocos (geralmente entre 1 e 10 minutos).
 
-Abra o navegador em http://127.0.0.1 (porta default; confira o README ou configs do .exe).
+Para alterar o intervalo, modifique o valor de `static const int64_t nPowTargetSpacing` e recompile o código.
 
-Você terá acesso a uma interface web simples para navegar blocos, txs e endereços .
+---
 
-2. Mineração “Normal” em Prova de Trabalho
-O módulo de mineração está embutido no executável e expõe o endpoint POST /mine .
+### 3. Carteira Compatível com Bitcoin
 
-Fluxo:
+O **Bitcoin3.0** é compatível com as chaves privadas e endereços padrão do Bitcoin (BTC), utilizando o formato **WIF/P2PKH**. Isso permite importar e exportar chaves privadas de carteiras BTC.
 
-Envie uma requisição POST (ou use o botão “Mine” na UI) para /mine.
+#### Prefixos de Endereços:
+- **Endereço Público (P2PKH)**: Prefixo `23` (exemplo: começa com "M").
+- **Chave Privada (WIF)**: Prefixo `151`.
 
-O nó tentará encontrar o nonce válido e adicionará um novo bloco à cadeia local.
+---
 
-A recompensa é creditada ao endereço definido nos parâmetros de gênese.
+### 4. Rede P2P Local
 
-Configuração:
+A comunicação P2P no Bitcoin3.0 ocorre exclusivamente na sua máquina local (localhost, **127.0.0.1**). Não há peers externos conectados.
 
-O arquivo chainparams.cpp no fork do Bitcoin Core define o nPowTargetSpacing (intervalo de blocos configurável entre 1–10 min).
+#### Configuração de Rede:
+No arquivo de configuração **bitcoin3.conf**, a rede é configurada para aceitar conexões apenas de **127.0.0.1**.
 
-Para alterar, recompile alterando static const int64_t nPowTargetSpacing 
-bitaps.com
-.
-
-3. Carteira e Chaves Privadas Compatíveis com BTC
-Bitcoin3.0 reutiliza o formato WIF/P2PKH do Bitcoin original, o que permite usar a mesma carteira e chaves privadas .
-
-Prefixos:
-
-cpp
-Copiar
-Editar
-base58Prefixes[PUBKEY_ADDRESS] = {23};    // endereços começam com ‘M’ (exemplo)
-base58Prefixes[SECRET_KEY]     = {151};   // WIF privado padrão
-:contentReference[oaicite:5]{index=5}  
-Importação/Exportação:
-
-No cliente GUI local, há opção “Import WIF” para carregar sua chave BTC existente.
-
-Endereços gerados serão reconhecidos por qualquer wallet compatível com aquele prefixo (e.g., Bitcoin Core).
-
-4. Rede P2P em 127.0.0.1
-Não existem DNS seeds nem peers públicos — toda a comunicação P2P é feita localmente .
-
-Configuração de peers:
-
-O arquivo de configuração (bitcoin3.conf) inclui linhas como:
-
-ini
-Copiar
-Editar
+```ini
 listen=1
 bind=127.0.0.1
-port=8333
-Para conectar manualmente outro nó local, use addnode=127.0.0.1 em múltiplas instâncias .
-
-Implica que cada instância do .exe (ou do daemon) fala apenas com si mesma, a menos que você rode várias instâncias na mesma máquina.
-
-5. Passo a Passo para Testar Tudo na Sua Máquina
-Baixe e extraia o release v3.0.0 do GitHub.
-
-Abra um terminal na pasta e execute Bitcoin3.0.exe (Windows) ou ./bitcoin3d (Linux).
-
-Visite http://127.0.0.1 para o explorer e http://127.0.0.1 para a RPC mineradora.
-
-Importe sua chave WIF via UI, ou coloque importprivkey <WIF> na RPC console.
-
-Mine enviando curl -X POST http://127.0.0.1/mine (ou clicando no botão).
-
-Confira no explorer o novo bloco e o saldo sendo creditado no seu endereço.
-
-Conclusão
-Tudo que o Bitcoin3.0 oferece é uma instância local do protocolo Bitcoin customizado para gerar “BTC3”, rodando exclusivamente em 127.0.0.1. Ele reutiliza as mesmas chaves e formatos de endereço do Bitcoin real e agrupa em um único executável:
-
-Explorer próprio via HTTP local
-
-Mineração PoW com bloco configurável
-
-Carteira BTC compatível e importação de chaves WIF
-
-Rede P2P isolada à sua máquina
-
-**Bitcoin3.0 (BTC3)** é uma evolução do conceito original do Bitcoin (BTC), combinando a segurança comprovada do sistema de carteiras Bitcoin com uma blockchain independente e um mecanismo de mineração próprio.
+port=80
 
 ## 🚀 Visão Geral
 - **Compatibilidade de Carteiras:** Mesmos formatos de chaves públicas, privadas e WIF do Bitcoin.
