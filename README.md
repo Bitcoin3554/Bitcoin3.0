@@ -26,7 +26,7 @@ Como usar:
 
 Execute o Bitcoin3.0.exe.
 
-Abra o navegador em http://127.0.0.1:3001 (porta default; confira o README ou configs do .exe).
+Abra o navegador em http://127.0.0.1 (porta default; confira o README ou configs do .exe).
 
 Você terá acesso a uma interface web simples para navegar blocos, txs e endereços .
 
@@ -79,7 +79,7 @@ Editar
 listen=1
 bind=127.0.0.1
 port=8333
-Para conectar manualmente outro nó local, use addnode=127.0.0.1:8333 em múltiplas instâncias .
+Para conectar manualmente outro nó local, use addnode=127.0.0.1 em múltiplas instâncias .
 
 Implica que cada instância do .exe (ou do daemon) fala apenas com si mesma, a menos que você rode várias instâncias na mesma máquina.
 
@@ -88,11 +88,11 @@ Baixe e extraia o release v3.0.0 do GitHub.
 
 Abra um terminal na pasta e execute Bitcoin3.0.exe (Windows) ou ./bitcoin3d (Linux).
 
-Visite http://127.0.0.1:3001 para o explorer e http://127.0.0.1:8332 para a RPC mineradora.
+Visite http://127.0.0.1 para o explorer e http://127.0.0.1 para a RPC mineradora.
 
 Importe sua chave WIF via UI, ou coloque importprivkey <WIF> na RPC console.
 
-Mine enviando curl -X POST http://127.0.0.1:8332/mine (ou clicando no botão).
+Mine enviando curl -X POST http://127.0.0.1/mine (ou clicando no botão).
 
 Confira no explorer o novo bloco e o saldo sendo creditado no seu endereço.
 
