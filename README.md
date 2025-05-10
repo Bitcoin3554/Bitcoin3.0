@@ -1,92 +1,93 @@
 # Crypito Bitcoin3.0 And Bitcoin
 
-## Visão Geral
+## Overview
 
-O **Bitcoin3.0** é uma implementação local do protocolo Bitcoin, que roda em uma única máquina. Ele inclui um explorador de blocos próprio, mineração utilizando prova de trabalho (PoW), uma carteira compatível com o Bitcoin, e uma rede P2P restrita a **127.0.0.1** (localhost). Tudo ocorre localmente em sua máquina.
+**Bitcoin3.0** is a local implementation of the Bitcoin protocol that runs on a single machine. It includes its own block explorer, proof-of-work (PoW) mining, a Bitcoin-compatible wallet, and a P2P network restricted to **127.0.0.1** (localhost). Everything happens locally on your machine.
 
-## Funcionalidades
+## Features
 
-### 1. Block Explorer e API HTTP Local
+### 1. Block Explorer and Local HTTP API
 
-O Bitcoin3.0 inclui um **explorador de blocos** e uma **API HTTP** para interação com a blockchain. A comunicação é feita via **127.0.0.1**, garantindo que a interação ocorra localmente. 
+Bitcoin3.0 includes a **block explorer** and an **HTTP API** for interacting with the blockchain. Communication is done via **127.0.0.1**, ensuring that interaction happens locally.
 
-#### Endpoints da API:
-- **GET /chain**: Retorna a cadeia de blocos atual.
-- **GET /block/{hash}**: Detalhes de um bloco específico.
-- **GET /tx/{txid}**: Detalhes de uma transação específica.
+#### API Endpoints:
+- **GET /chain**: Returns the current block chain.
+- **GET /block/{hash}**: Details of a specific block.
+- **GET /tx/{txid}**: Details of a specific transaction.
 
-#### Como usar:
-1. Execute o arquivo **Bitcoin3.0.exe** (Windows) ou **./bitcoin3d** (Linux).
-2. Abra o navegador em [http://127.0.0.1](http://127.0.0.1) para acessar a interface do explorador de blocos.
-3. Explore os blocos, transações e endereços diretamente na interface.
-
----
-
-### 2. Mineração com Prova de Trabalho (PoW)
-
-O **Bitcoin3.0** tem um minerador embutido que utiliza o algoritmo de **Prova de Trabalho (PoW)**. Você pode gerar novos blocos na blockchain localmente.
-
-#### Fluxo de Mineração:
-1. Envie uma requisição POST para o endpoint **/mine**.
-2. O nó tentará encontrar um nonce válido e, ao sucesso, adicionará um novo bloco à cadeia local.
-3. A recompensa pela mineração será creditada ao endereço especificado.
-
-#### Configuração de Mineração:
-No arquivo **chainparams.cpp**, o parâmetro **nPowTargetSpacing** define o intervalo entre blocos (geralmente entre 1 e 10 minutos).
-
-Para alterar o intervalo, modifique o valor de static const int64_t nPowTargetSpacing e recompile o código.
+#### How to use:
+1. Run the **Bitcoin3.0.exe** (Windows) or **./bitcoin3d** (Linux) file.
+2. Open a web browser at [http://127.0.0.1](http://127.0.0.1) to access the block explorer interface.
+3. Explore blocks, transactions, and addresses directly in the interface.
 
 ---
 
-### 3. Carteira Compatível com Bitcoin
+### 2. Proof-of-Work (PoW) Mining
 
-O **Bitcoin3.0** é compatível com as chaves privadas e endereços padrão do Bitcoin (BTC), utilizando o formato **WIF/P2PKH**. Isso permite importar e exportar chaves privadas de carteiras BTC.
+**Bitcoin3.0** has a built-in miner that uses the **Proof-of-Work (PoW)** algorithm. You can generate new blocks on the blockchain locally.
 
-#### Prefixos de Endereços:
-- **Endereço Público (P2PKH)**: Prefixo 23 (exemplo: começa com "M").
-- **Chave Privada (WIF)**: Prefixo 151.
+#### Mining Flow:
+1. Send a POST request to the **/mine** endpoint.
+2. The node will attempt to find a valid nonce and, upon success, will add a new block to the local chain.
+3. The mining reward will be credited to the specified address.
+
+#### Mining Configuration:
+In the **chainparams.cpp** file, the **nPowTargetSpacing** parameter sets the interval between blocks (usually between 1 and 10 minutes).
+
+To change the interval, modify the value of static const int64_t nPowTargetSpacing and recompile the code.
 
 ---
 
-### 4. Rede P2P Local
+### 3. Bitcoin Compatible Wallet
 
-A comunicação P2P no Bitcoin3.0 ocorre exclusivamente na sua máquina local (localhost, **127.0.0.1**). Não há peers externos conectados.
+**Bitcoin3.0** supports standard Bitcoin (BTC) private keys and addresses, using the **WIF/P2PKH** format. This allows you to import and export private keys from BTC wallets.
 
-#### Configuração de Rede:
-No arquivo de configuração **bitcoin3.conf**, a rede é configurada para aceitar conexões apenas de **127.0.0.1**.
+#### Address Prefixes:
+- **Public Address (P2PKH)**: Prefix 23 (example: starts with "M").
+
+- **Private Key (WIF)**: Prefix 151.
+
+---
+
+### 4. Local P2P Network
+
+P2P communication in Bitcoin3.0 occurs exclusively on your local machine (localhost, **127.0.0.1**). There are no external peers connected.
+
+#### Network Configuration:
+In the **bitcoin3.conf** configuration file, the network is configured to accept connections only from **127.0.0.1**.
 
 ini
 listen=1
 bind=127.0.0.1
 port=80
 
-## 🚀 Visão Geral
-- **Compatibilidade de Carteiras:** Mesmos formatos de chaves públicas, privadas e WIF do Bitcoin.
-- **Blockchain Própria:** Rede separada que gera BTC3 em vez de BTC.
-- **Mineração Dual:** Uma carteira única pode minerar e armazenar BTC (na rede Bitcoin) e BTC3 (na rede Bitcoin3.0) simultaneamente.
-- **Transações Rápidas:** Blocos configuráveis para tempos de confirmação mais baixos (1–10 minutos).
+## 🚀 Overview
+- **Wallet Compatibility:** Same public, private and WIF key formats as Bitcoin.
+- **Own Blockchain:** Separate network that generates BTC3 instead of BTC. - **Dual Mining:** A single wallet can mine and store BTC (on the Bitcoin network) and BTC3 (on the Bitcoin3.0 network) simultaneously.
+
+- **Fast Transactions:** Configurable blocks for faster confirmation times (1–10 minutes).
 
 ## 📄 Whitepaper
-Para entender em detalhes o design, algoritmo de mineração, tokenomics e roadmap do Bitcoin3.0, consulte o whitepaper oficial:
+To understand in detail the design, mining algorithm, tokenomics and roadmap of Bitcoin3.0, check out the official whitepaper:
 
-* [Whitepaper Bitcoin3.0 (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf)
-* 
+* [Bitcoin3.0 Whitepaper (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf)
+*
 ## 🧱 Downloads
-- 📥 **Bitcoin Core:** [Downloads Aqui](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v3.0.0)
+- 📥 **Bitcoin Core:** [Downloads Here](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v3.0.0)
 
-## 🔧 Ferramentas
+## 🔧 Tools
 ### Bitcoin / Bitcoin3.0 Wallet Generator
-Acesse para criar carteiras compatíveis com BTC e BTC3:
+Go to this to create BTC and BTC3 compatible wallets:
 
 http://127.0.0.1
-## 🔗 Endpoints da API
+## 🔗 API Endpoints
 - **Smart Contract:** `GET http://127.0.0.1/contract/carteira/external-transactions`
 - **Balance:** `GET http://127.0.0.1/balance/<address>`
 - **New Transfer:** `POST http://127.0.0.1/transactions/new`
 - **Blocks:** `GET http://127.0.0.1/chain`
 - **Transfer:** `POST http://127.0.0.1/transfer`
-- **Carteras (Carteiras):** `POST http://127.0.0.1/wallet/create`
-- **Mining (Mineração):** `GET http://127.0.0.1/mine`
+- **Carteras (Wallets):** `POST http://127.0.0.1/wallet/create`
+- **Mining:** `GET http://127.0.0.1/mine`
 
 ## 📷 Crypto Bitcoin!
 ![BTC3](https://github.com/Pipo-Pay/crypito/raw/main/Pipo-(pay).jpg)
@@ -97,4 +98,4 @@ http://127.0.0.1
 
 ---
 
-© 2025 Crypito Labs. Todos os direitos reservados.
+© 2025 Crypto Labs. All rights reserved.
