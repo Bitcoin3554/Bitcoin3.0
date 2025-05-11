@@ -80,7 +80,7 @@ Once installed, you can:
 ## 📜 License
 
 This project is licensed under the **MIT License**.  
-Please refer to the `LICENSE` file for more details.
+Please refer to the [`LICENSE`](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/LICENSE) file for more details.
 
 ---
 
