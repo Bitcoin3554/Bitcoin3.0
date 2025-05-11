@@ -1,87 +1,87 @@
 # 🚀 Bitcoin3-Core (BTC3)
 
-Bem-vindo ao repositório oficial do **Bitcoin3 (BTC3)** – uma reimaginação moderna da moeda digital descentralizada. O Bitcoin3 foi projetado para fornecer **mais desempenho, escalabilidade** e **eficiência energética** na mineração, tornando-se uma escolha robusta para entusiastas de blockchain, desenvolvedores e mineradores.
+Welcome to the official **Bitcoin3 (BTC3)** repository – a modern reimagining of decentralized digital currency. Bitcoin3 is designed to offer **higher performance, scalability**, and **energy-efficient mining**, making it a robust choice for blockchain enthusiasts, developers, and miners.
 
 ![Bitcoin3 Logo](https://blockspot.io/wp-content/uploads/bitcoin-3-btc3-coin-logo.png)
 
 ---
 
-## 📑 Índice
+## 📑 Table of Contents
 
-- [📦 Recursos Principais](#-recursos-principais)
-- [🖥️ Requisitos do Sistema](#️-requisitos-do-sistema)
-- [📥 Instalação](#-instalação)
-- [🚀 Uso Rápido](#-uso-rápido)
-- [📁 Estrutura do Projeto](#-estrutura-do-projeto)
-- [📚 Documentação](#-documentação)
-- [🧠 Desenvolvedores](#-desenvolvedores)
-- [📜 Licença](#-licença)
-- [🤝 Contribuições](#-contribuições)
-
----
-
-## 📦 Recursos Principais
-
-- 🧠 **Núcleo BTC3**: Execute sua própria instância da blockchain Bitcoin3 localmente.
-- 🛠️ **Minerador BTC3**: Módulo de mineração com aceleração CUDA para GPUs NVIDIA.
-- 📈 **Painel Web**: Dashboard local para visualizar o status da rede e blocos minerados.
-- 🔐 **Sistema de Carteiras**: Geração e armazenamento seguro de carteiras BTC3.
-- ⚙️ **Instalador Completo**: Instalador `.exe` com assistente interativo, ícones personalizados e suporte à instalação do CUDA Toolkit.
+- [📦 Key Features](#-key-features)
+- [🖥️ System Requirements](#️-system-requirements)
+- [📥 Installation](#-installation)
+- [🚀 Quick Start](#-quick-start)
+- [📁 Project Structure](#-project-structure)
+- [📚 Documentation](#-documentation)
+- [🧠 Developers](#-developers)
+- [📜 License](#-license)
+- [🤝 Contributions](#-contributions)
 
 ---
 
-## 🖥️ Requisitos do Sistema
+## 📦 Key Features
 
-- 💻 **Sistema Operacional**: Windows 10 ou superior
-- 🔧 **Dependência**: CUDA Toolkit 12.8 (incluso no instalador)
-- 🧮 **CPU**: Dual Core ou superior
-- 🎮 **GPU**: NVIDIA com suporte a CUDA (para mineração)
-- 💾 **Armazenamento**: 1 GB de espaço livre
-
----
-
-## 📥 Instalação
-
-1. Baixe todos os arquivos do instalador:
-
-   [📦 Bitcore3_install.exe e binários adicionais (.bin)](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v3.0.0)
-
-   > ⚠️ **Importante**: Certifique-se de baixar todos os arquivos `.bin` junto com o `.exe`, pois são partes do instalador.
-
-2. Execute o `Bitcore3_install.exe` como **administrador**.
-3. Siga o assistente de instalação:
-   - Escolha o tipo de instalação: **Núcleo**, **Minerador** ou **Completa**.
-   - (Opcional) Instale o CUDA Toolkit automaticamente.
-4. Ao final, utilize os atalhos criados na área de trabalho ou menu iniciar.
+- 🧠 **BTC3 Core**: Run your own local Bitcoin3 blockchain node.
+- 🛠️ **BTC3 Miner**: GPU-accelerated miner module using NVIDIA CUDA.
+- 📈 **Web Dashboard**: Local dashboard to monitor network status and mined blocks.
+- 🔐 **Wallet System**: Secure wallet generation and storage for BTC3.
+- ⚙️ **Full Installer**: `.exe` installer with interactive wizard, custom icons, and optional CUDA Toolkit setup.
 
 ---
 
-## 🚀 Uso Rápido
+## 🖥️ System Requirements
 
-Após a instalação, você poderá:
-
-- Iniciar o **núcleo BTC3** clicando em "Bitcoin3.0".
-- Iniciar o **minerador** com "Bitcoin3.0-Miner".
-- Acessar o **painel da blockchain** no navegador: [`http://127.0.0.1`](http://127.0.0.1)
-
----
-
-## 📁 Estrutura do Projeto
-
+- 💻 **Operating System**: Windows 10 or newer
+- 🔧 **Dependency**: CUDA Toolkit 12.8 (included in the installer)
+- 🧮 **CPU**: Dual Core or higher
+- 🎮 **GPU**: NVIDIA with CUDA support (for mining)
+- 💾 **Storage**: At least 1 GB of free space
 
 ---
 
-## 📚 Documentação
+## 📥 Installation
 
-- 📄 [Whitepaper Oficial (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf)
-- 🌐 [Website Local (padrão)](http://127.0.0.1)
-- 💬 [Discussões e Suporte](https://github.com/Bitcoin3554/Bitcoin3.0/discussions)
+1. Download all installer files:
+
+   [📦 Bitcore3_install.exe and additional .bin files](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v3.0.0)
+
+   > ⚠️ **Important**: Make sure to download all `.bin` files alongside the `.exe`. These are parts of the complete installer.
+
+2. Run `Bitcore3_install.exe` as **administrator**.
+3. Follow the installation wizard:
+   - Choose the installation type: **Core**, **Miner**, or **Full**.
+   - (Optional) Automatically install the CUDA Toolkit.
+4. After installation, use the shortcuts created on your desktop or Start menu.
 
 ---
 
-## 🧠 Desenvolvedores
+## 🚀 Quick Start
 
-Quer contribuir ou customizar?
+Once installed, you can:
+
+- Launch **BTC3 Core** using the "Bitcoin3.0" shortcut.
+- Start the **Miner** using "Bitcoin3.0-Miner".
+- Access the **blockchain dashboard** in your browser: [`http://127.0.0.1`](http://127.0.0.1)
+
+---
+
+## 📁 Project Structure
+
+
+---
+
+## 📚 Documentation
+
+- 📄 [Official Whitepaper (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf)
+- 🌐 [Local Website (default)](http://127.0.0.1)
+- 💬 [Discussions & Support](https://github.com/Bitcoin3554/Bitcoin3.0/discussions)
+
+---
+
+## 🧠 Developers
+
+Want to contribute or customize?
 
 ```bash
 git clone https://github.com/Bitcoin3554/Bitcoin3.0.git
