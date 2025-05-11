@@ -1,21 +1,2 @@
-<<<<<<< HEAD
-Bitcoin3.0-Miner.exe 
-=======
-node_modules
-.env
-
-# Hardhat files
-/cache
-/artifacts
-
-# TypeChain files
-/typechain
-/typechain-types
-
-# solidity-coverage files
-/coverage
-/coverage.json
-
-# Hardhat Ignition default folder for deployments against a local node
-ignition/deployments/chain-31337
->>>>>>> 775583bc073be3755a75735e0440fd397e0d6ef1
+scratch
+test
