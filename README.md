@@ -69,6 +69,30 @@ Once installed, you can:
 ## 📁 Project Structure
 
 
+├── core/ # BTC3 core blockchain source code
+├── miner/ # Mining module source code
+├── webpanel/ # Web dashboard for network monitoring
+├── wallet/ # Digital wallet module
+├── installer/ # Installer files and Inno Setup scripts
+├── docs/ # Documentation and whitepaper
+└── README.md # Project overview
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+Please refer to the `LICENSE` file for more details.
+
+---
+
+## 🤝 Contributions
+
+Contributions are welcome and encouraged! To contribute:
+
+1. **Fork** this repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b my-feature
+
 ---
 
 ## 📚 Documentation
