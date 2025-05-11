@@ -55,7 +55,7 @@ Após a instalação:
 
 ## 📚 Documentação
 
-- 📄 [Whitepaper Oficial](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdftemplates/Whitepaper.html)
+- 📄 [Whitepaper Oficial]([https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdftemplates/Whitepaper.html](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf))
 - 🌐 [Website Oficial](http://127.0.0.1)
 - 💬 [Suporte e Comunidade]([https://bitcoin3.org/support](https://github.com/Bitcoin3554/Bitcoin3.0/discussions))
 
