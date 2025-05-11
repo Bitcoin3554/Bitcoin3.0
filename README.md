@@ -42,8 +42,13 @@ Bem-vindo ao repositório oficial do **Bitcoin3 (BTC3)** – uma reimaginação 
 
 ## 📥 Instalação
 
-1. Baixe o instalador: [`Bitcore3_install.exe Bitcore3_install.-1.bin Bitcore3_install.-2.bin Bitcore3_install.-3.bin Bitcore3_install.-4.bin`](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v3.0.0)
-2. Execute o instalador como **administrador**.
+1. Baixe todos os arquivos do instalador:
+
+   [📦 Bitcore3_install.exe e binários adicionais (.bin)](https://github.com/Bitcoin3554/Bitcoin3.0/releases/tag/v3.0.0)
+
+   > ⚠️ **Importante**: Certifique-se de baixar todos os arquivos `.bin` junto com o `.exe`, pois são partes do instalador.
+
+2. Execute o `Bitcore3_install.exe` como **administrador**.
 3. Siga o assistente de instalação:
    - Escolha o tipo de instalação: **Núcleo**, **Minerador** ou **Completa**.
    - (Opcional) Instale o CUDA Toolkit automaticamente.
