@@ -3,6 +3,7 @@
 Welcome to the official **Bitcoin3 (BTC3)** repository – a modern reimagining of decentralized digital currency. Bitcoin3 is designed to offer **higher performance, scalability**, and **energy-efficient mining**, making it a robust choice for blockchain enthusiasts, developers, and miners.
 
 ![Bitcoin3 Logo](https://blockspot.io/wp-content/uploads/bitcoin-3-btc3-coin-logo.png)
+![Minig]([https://link-da-imagem.com/imagem.png](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/miner.jpg))
 
 ---
 
