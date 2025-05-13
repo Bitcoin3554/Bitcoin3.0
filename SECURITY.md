@@ -12,7 +12,7 @@ As versões oficialmente suportadas com atualizações de segurança estão list
 
 Para relatar vulnerabilidades ou falhas de segurança, envie um e-mail para:
 
-📧 **security@btc3.org** *(não utilize este endereço para suporte técnico ou dúvidas gerais)*
+📧 **security@bitcoin.org** *(não utilize este endereço para suporte técnico ou dúvidas gerais)*
 
 ---
 
