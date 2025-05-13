@@ -71,7 +71,7 @@ GPU compatible: NVIDIA or AMD (for mineração via GPU)
 
    > ⚠️ **Important**: Make sure to download all `.bin` files alongside the `.exe`. These are parts of the complete installer.
 
-2. Run `Bitcore3_install.exe` as **administrator**.
+2. Run `BitCore3_install.exe` as **administrator**.
 3. Follow the installation wizard:
    - Choose the installation type: **Core**, **Miner**, or **Full**.
    - (Optional) Automatically install the CUDA Toolkit.
