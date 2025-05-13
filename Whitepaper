@@ -1,0 +1,53 @@
+# BTC3 - Blockchain Compatível com Bitcoin
+
+## Visão Geral
+
+BTC3 é uma blockchain alternativa ao Bitcoin, usando os mesmos padrões de endereços, chaves e transações. Ideal para testes, desenvolvimento, e mineração controlada.
+
+## Características
+
+- Chaves privadas e endereços 100% compatíveis com Bitcoin
+- Mineração independente (blockchain própria)
+- RPC, carteira e nodes iguais ao Bitcoin
+- Saldo minerado exclusivo na BTC3
+
+## Rede
+
+- Porta padrão: 80
+- Porta RPC: 80
+- ChainID customizado: `BTC3`
+
+## Componentes
+
+- `bitcoind` com configs próprias
+- Explorador web baseado em BTC-RPC-Explorer
+- Faucet com integração RPC
+- Wallet Web (em desenvolvimento)
+
+## Segurança
+
+- Proteção contra replay attacks com prefixo de transações BTC3
+- Separação de arquivos de blockchain, logs e wallet
+
+## Instalação Rápida
+
+```bash
+git clone https://github.com/Bitcoin3554/Bitcoin3.0.git
+cd btc3
+./install.sh
+
+---
+
+## ✅ 4. chainID / Proteção contra *Replay Attack*
+
+Bitcoin não tem `chainID` como o Ethereum. Mas você pode evitar *replay attacks* de 2 formas:
+
+### 🔐 Opção A: Modificar o "Magic Bytes" da rede
+
+No código da sua BTC3 (fork do Bitcoin Core), altere:
+
+```cpp
+pchMessageStart[0] = 0xb3;
+pchMessageStart[1] = 0xc3;
+pchMessageStart[2] = 0xd3;
+pchMessageStart[3] = 0xe3;
