@@ -98,7 +98,7 @@ Contributions are welcome and encouraged! To contribute:
 ## 📚 Documentation
 
 - 📄 [Official Whitepaper (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/Bitcoin3.0_Whitepaper.pdf)
-- 🌐 [Local Website (default)](http://127.0.0.1)
+- 🌐 [Local Website (default)](https://bitcoin.org/en/)
 - 💬 [Discussions & Support](https://github.com/Bitcoin3554/Bitcoin3.0/discussions)
 
 ---
