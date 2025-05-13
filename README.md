@@ -1,11 +1,34 @@
 # 🚀 Bitcoin3-Core (BTC3)
-
-Welcome to the official **Bitcoin3 (BTC3)** repository – a modern reimagining of decentralized digital currency. Bitcoin3 is designed to offer **higher performance, scalability**, and **energy-efficient mining**, making it a robust choice for blockchain enthusiasts, developers, and miners.
+Bitcoin3.0 is an innovative cryptocurrency that allows users to simultaneously manage BTC and BTC3 using the same private key. Desenvolvida com base no protocolo Bitcoin, esta moeda oferece uma blockchain propria com mineração dedicated, maintaining a compatibility with carteiras e exchanges que suportam o Bitcoin.
 
 ![Miner Image](https://raw.githubusercontent.com/Bitcoin3554/Bitcoin3.0/main/miner.jpg)
 
 ---
+🚀 Functionalities
+Compatibilidade com BTC: Utilize a mesma chave privada para accessar BTC e BTC3.
 
+Blockchain Independente: Rede propia para BTC3, eviento interferências com a blockchain do Bitcoin.
+
+Minerador Integrado: Suporte a mineração via CPU e GPU com interface local para monitoramento.
+
+Explorador de Blocos: Visualize transactions and mined blocks in real time.
+
+🛠️ Tecnologias Utilizadas
+Language: C++
+
+Bibliotecas: OpenSSL, Boost, libevent
+
+Minerador: OpenCL para suporte a GPU
+
+Interface: Flask para server web local
+
+📦 Installation
+Requirements
+Operating system: Linux or Windows
+
+Dependencies: OpenSSL, Boost, libevent, OpenCL
+
+GPU compatible: NVIDIA or AMD (for mineração via GPU)
 ## 📑 Table of Contents
 
 - [📦 Key Features](#-key-features)
