@@ -1,7 +1,7 @@
 # 🚀 Bitcoin3-Core (BTC3)
 Bitcoin3.0 is an innovative cryptocurrency that allows users to simultaneously manage BTC and BTC3 using the same private key. Desenvolvida com base no protocolo Bitcoin, esta moeda oferece uma blockchain propria com mineração dedicated, maintaining a compatibility with carteiras e exchanges que suportam o Bitcoin.
 
-![Miner Image](https://raw.githubusercontent.com/Bitcoin3554/Bitcoin3.0/main/miner.jpg)
+<img src="https://raw.githubusercontent.com/Bitcoin3554/Bitcoin3.0/main/miner.jpg" alt="Miner Image" width="600"/>
 
 ---
 🚀 Functionalities
