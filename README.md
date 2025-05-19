@@ -2,7 +2,9 @@
 
 ## About the project
 
-O **btc3** é um projeto que implementa uma solution para [breve descrição do que faz]. Além disso, ele inclui uma **decentralized web interface** that allows direct interaction with the blockchain in a secure way and does not depend on centralized servers.
+O **btc3** is an experimental system based on blockchain that aims to promote safe, fast and decentralized transactions, using a light and accessible infrastructure. He proposes an alternative to the traditional model of the Bitcoin network, with focus on scalability, anonymity and autonomy of users.
+
+Além disso, ele inclui uma **decentralized web interface** that allows direct interaction with the blockchain in a secure way and does not depend on centralized servers.
 
 Essa interface web decentralizada provides:
 
@@ -15,13 +17,6 @@ Essa interface web decentralizada provides:
 To know more about the configuration and use of the decentralized web interface, check out the tutorial:
 
 [BTC3 Cloudflare Tunnel Tutorial (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/BTC3_Cloudflare_Tunnel_Tutorial.pdf)
-
-...
-
-# 🚀 Bitcoin3-Core (BTC3)
-Bitcoin3.0 is an innovative cryptocurrency that allows users to simultaneously manage BTC and BTC3 using the same private key. Desenvolvida com base no protocolo Bitcoin, esta moeda oferece uma blockchain propria com mineração dedicated, maintaining a compatibility with carteiras e exchanges que suportam o Bitcoin.
-
-![Miner Image](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/miner.jpg)
 
 ---
 🚀 Functionalities
