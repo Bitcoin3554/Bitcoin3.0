@@ -2,9 +2,9 @@
 
 ## About the project
 
-O **btc3** is an experimental system based on blockchain that aims to promote safe, fast and decentralized transactions, using a light and accessible infrastructure. He proposes an alternative to the traditional model of the Bitcoin network, with focus on scalability, anonymity and autonomy of users.
+**btc3** is a real and functional blockchain system, developed to offer safe, fast and decentralized transactions. Ele funciona como uma alternative efficienta ao modelo traditional do Bitcoin, com foco em escalabilidade, anonimato e autonomia total dos users.
 
-Além disso, ele inclui uma **decentralized web interface** that allows direct interaction with the blockchain in a secure way and does not depend on centralized servers.
+Além disso, o btc3 implements a **decentralized web interface**, which allows direct interaction with the blockchain, without depending on centralized servers, guaranteeing maximum transparency and security.
 
 Essa interface web decentralizada provides:
 
