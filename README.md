@@ -1,18 +1,18 @@
-# btc3
+# 🚀 Btc3
 
-## Sobre o projeto
+## About the project
 
-O **btc3** é um projeto que implementa uma solução para [breve descrição do que faz]. Além disso, ele inclui uma **interface web descentralizada** que permite interação direta com a blockchain de forma segura e sem depender de servidores centralizados.
+O **btc3** é um projeto que implementa uma solution para [breve descrição do que faz]. Além disso, ele inclui uma **decentralized web interface** that allows direct interaction with the blockchain in a secure way and does not depend on centralized servers.
 
-Essa interface web descentralizada proporciona:
+Essa interface web decentralizada provides:
 
-- Acesso direto e transparente aos dados na blockchain.
-- Maior segurança e privacidade para os usuários.
-- Operações confiáveis sem intermediários centralizados.
+- Direct and transparent access to blockchain data.
+- Greater security and privacy for users.
+- Operações confiáveis ​​sem intermediários centralizados.
 
-## Como usar a interface web descentralizada
+## Como usar a interface web decentralizada
 
-Para saber mais sobre a configuração e uso da interface web descentralizada, confira o tutorial:
+To know more about the configuration and use of the decentralized web interface, check out the tutorial:
 
 [BTC3 Cloudflare Tunnel Tutorial (PDF)](https://github.com/Bitcoin3554/Bitcoin3.0/blob/main/BTC3_Cloudflare_Tunnel_Tutorial.pdf)
 
