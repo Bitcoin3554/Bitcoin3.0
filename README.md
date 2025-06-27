@@ -1,34 +1,11 @@
 # 🚀 Bitcoin3 Btc3
-## Endpoint Protection in the Executable
+🚫 **Sending Security (send.btc3.org)**
+For security reasons, the sending logic (transactions) is protected and embedded in the final executable. This ensures that official endpoints cannot be spoofed or cloned by third parties. The open source client can be audited, but the sending logic is shielded from changes or attacks.
 
-The network endpoints (e.g. `send.btc3.org`, `send.bitcoin3.org`) are embedded directly in the source code and compiled into the executable file (.exe). These values ​​are not stored in external files or easily editable variables.
+✅ The mining, wallet and balance reading code is 100% open source.
+🔐 The sending routes are secured in the project's signed binary.
 
-This was done to:
-
-- Prevent malicious users from altering the servers to divert or manipulate transactions.
-
-- Protect the integrity and security of the application.
-
-- Ensure that only official endpoints are used, maintaining the trust of the system.
-
-**Note:** Although the code is open source, the final executable is obfuscated and compiled, making reverse engineering and changes difficult.
-
----
-
-If you want to change the endpoints, the only safe way is to recompile the source code with the new values.
-## About the project
-
-**btc3** is a real and functional blockchain system, developed to offer safe, fast and decentralized transactions. Ele funciona como uma alternative efficienta ao modelo traditional do Bitcoin, com foco em escalabilidade, anonimato e autonomia total dos users.
-
-Além disso, o btc3 implements a **decentralized web interface**, which allows direct interaction with the blockchain, without depending on centralized servers, guaranteeing maximum transparency and security.
-
-Essa interface web decentralizada provides:
-
-- Direct and transparent access to blockchain data.
-- Greater security and privacy for users.
-- Operações confiáveis ​​sem intermediários centralizados.
-
-## Como usar a interface web decentralizada
+## Chow to use the decentralized web interface
 
 To know more about the configuration and use of the decentralized web interface, check out the tutorial:
 
