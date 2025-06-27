@@ -5,6 +5,15 @@ For security reasons, the sending logic (transactions) is protected and embedded
 ✅ The mining, wallet and balance reading code is 100% open source.
 🔐 The sending routes are secured in the project's signed binary.
 
+# Bitcoin3.0 - Official Client (Open Source)
+
+This repository contains **only the client code (graphical interface)** of the Bitcoin3.0 cryptocurrency.
+
+Critical operations such as sending (`send.btc3.org`) are protected in `.exe`, ensuring network security and integrity.
+
+- Open source: Graphical interface, wallet creation, mining and balance query.
+
+- Closed source: Sending logic and final validation of transactions, for security reasons and prevention against malicious modifications.
 ## Chow to use the decentralized web interface
 
 To know more about the configuration and use of the decentralized web interface, check out the tutorial:
