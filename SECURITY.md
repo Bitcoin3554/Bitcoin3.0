@@ -1,48 +1,51 @@
-# Security Policy – BTC3
+🔒 Security Policy for Kert-One
+At Kert-One, we take the security of our project seriously. We appreciate your efforts to responsibly disclose any vulnerabilities you may find. This document outlines the process for reporting security issues to us.
 
-## Supported Versions
+Reporting a Vulnerability 🚨
+If you discover a security vulnerability in Kert-One, please DO NOT open a public GitHub issue for it. Public disclosure can put the project and its users at risk.
 
-As versões oficialmente suportadas com atualizações de segurança estão listadas em nosso site:
+Instead, please report it to us privately via:
 
-👉 https://bitcoin.org/en/lifecycle/#schedule *(substitua pela URL oficial do BTC3 quando tiver)*
+Email: [YOUR_EMAIL_ADDRESS_HERE] (e.g., security@yourdomain.com or your personal email)
 
----
+When reporting, please include as much detail as possible to help us understand and reproduce the issue:
 
-## Reporting a Vulnerability
+Description: A clear and concise description of the vulnerability.
 
-Para relatar vulnerabilidades ou falhas de segurança, envie um e-mail para:
+Steps to Reproduce: Detailed steps on how to trigger the vulnerability.
 
-📧 **security@bitcoin.org** *(não utilize este endereço para suporte técnico ou dúvidas gerais)*
+Impact: What is the potential impact of this vulnerability? (e.g., data breach, denial of service, unauthorized access)
 
----
+Affected Versions: Which versions or commits of Kert-One are affected?
 
-## PGP Keys for Secure Communication
+Proof of Concept (Optional but Recommended): Any code snippets, screenshots, or scripts that demonstrate the vulnerability.
 
-Use as chaves abaixo para comunicar informações sensíveis com segurança aos desenvolvedores do BTC3:
+Your Contact Information: (Optional) If you'd like us to be able to reach out for more details or to acknowledge your contribution.
 
-| Nome          | Fingerprint |
-|---------------|-------------|
-| João Nakamoto | `133E AC17 9436 F14A 5CF1 B794 860F EB80 4E66 9320` |
-| Maria Satoshi | `E777 299F C265 DD04 7930 70EB 944D 35F9 AC3D B76A` |
-| Ava Nakamura  | `1528 1230 0785 C964 44D3 334D 1756 5732 E08E 5E41` |
+Our Commitment 🤝
+Once you've submitted a vulnerability report, here's what you can expect:
 
----
+Acknowledgement: We will acknowledge receipt of your report within [E.g., 2 business days] of receiving it.
 
-## Como importar uma chave
+Investigation: Our team will investigate the reported vulnerability.
 
-Você pode importar uma chave executando o seguinte comando (substitua `<fingerprint>` pelo código desejado):
+Communication: We will keep you informed of our progress and any questions we may have during the investigation.
 
-```bash
-gpg --keyserver hkps://keys.openpgp.org --recv-keys "<fingerprint>"
+Resolution: We aim to resolve critical vulnerabilities as quickly as possible. The timeline for resolution depends on the severity and complexity of the issue.
 
----
+Disclosure: Once the vulnerability is resolved, we will coordinate with you on public disclosure, if appropriate, to ensure users are informed and credited.
 
-### 💡 Como adicionar no GitHub:
+Responsible Disclosure Guidelines ✔️
+We kindly request that you adhere to the following guidelines when reporting security vulnerabilities:
 
-1. No seu repositório, crie a pasta `.github/` se ainda não existir.
-2. Dentro dela, crie o arquivo `SECURITY.md`.
-3. Cole o conteúdo acima e salve.
+Do not publicly disclose the vulnerability until it has been resolved and we have agreed on a disclosure timeline.
 
----
+Do not exploit the vulnerability beyond what is necessary to prove its existence.
 
-Se quiser que eu gere também o `LICENSE`, `CODE_OF_CONDUCT`, `CONTRIBUTING.md` ou qualquer outro documento para seu projeto open source BTC3, posso preparar pra você. Deseja isso também?
+Do not access or modify data belonging to others.
+
+Do not engage in denial-of-service attacks.
+
+Thank you for helping us keep Kert-One secure!
+
+Remember to replace [YOUR_EMAIL_ADDRESS_HERE] with the actual email address you want security reports sent to. This should be an email address that you monitor regularly.
