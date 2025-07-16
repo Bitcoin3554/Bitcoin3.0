@@ -67,3 +67,82 @@ Open your terminal or command prompt and navigate to the `kert-one` project dire
 
 ```bash
 python app.py
+
+(Adjust app.py if your main Flask application file has a different name, e.g., node.py, main.py.)
+
+You should see output similar to:
+
+[timestamp] Servidor Flask pronto em: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+This indicates your blockchain node is running on http://127.0.0.1:5000.
+
+2. (Optional) Run the Client/Interface
+If you have a separate client or graphical interface, open a new terminal window and navigate to the kert-one project directory.
+
+Bash
+
+python client.py
+(Replace client.py with the actual name of your client script.)
+
+💡 Usage Examples
+Once your node is running, you can interact with it via its API. Here are some common endpoints you can use with tools like curl or a web browser:
+
+Get the full blockchain:
+
+GET [http://127.0.0.1:5000/chain](http://127.0.0.1:5000/chain)
+Mine a new block:
+
+GET [http://127.0.0.1:5000/mine](http://127.0.0.1:5000/mine)
+Add a new transaction:
+
+POST [http://127.0.0.1:5000/transactions/new](http://127.0.0.1:5000/transactions/new)
+Content-Type: application/json
+
+{
+    "sender": "your_wallet_address",
+    "recipient": "another_wallet_address",
+    "amount": 10
+}
+Get a wallet balance:
+
+GET [http://127.0.0.1:5000/balance/](http://127.0.0.1:5000/balance/)<your_wallet_address>
+(Replace <your_wallet_address> with an actual wallet ID from your client_wallet.json or logs, e.g., 9fdd8fd19144e68a8e8afb25979b50108e8099e0.)
+
+🛠️ Development
+Project Structure
+A brief overview of key files and directories:
+
+kert-one/
+├── app.py          # Main Flask application / Blockchain node
+├── blockchain.py   # Core blockchain logic (blocks, hashing, validation)
+├── wallet.py       # Wallet generation and transaction signing
+├── client.py       # (Optional) Example client or interface
+├── requirements.txt# Python dependencies
+└── README.md       # This file
+(Adjust this based on your actual project file structure.)
+
+🤝 Contributing
+Contributions are welcome! If you have suggestions or want to improve Kert-One, please:
+
+Fork the repository.
+
+Create a new branch (git checkout -b feature/AmazingFeature).
+
+Commit your changes (git commit -m 'Add some AmazingFeature').
+
+Push to the branch (git push origin feature/AmazingFeature).
+
+Open a Pull Request.
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+📞 Contact
+Your Name/Nickname - [Your Website/Portfolio/LinkedIn (Optional)]
+
+Project Link: https://github.com/YOUR_USERNAME/kert-one
+(Replace with your actual GitHub repository link)
+
+🙏 Acknowledgments
+Inspiration from various blockchain tutorials and resources.
+
+Thanks to [Anyone who helped, if applicable].
