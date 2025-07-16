@@ -47,5 +47,3 @@ Do not access or modify data belonging to others.
 Do not engage in denial-of-service attacks.
 
 Thank you for helping us keep Kert-One secure!
-
-Remember to replace  with the actual email address you want security reports sent to. This should be an email address that you monitor regularly.
