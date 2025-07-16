@@ -6,7 +6,7 @@ If you discover a security vulnerability in Kert-One, please DO NOT open a publi
 
 Instead, please report it to us privately via:
 
-Email: [YOUR_EMAIL_ADDRESS_HERE] (e.g., security@yourdomain.com or your personal email)
+Email: Kert.@kert-one.com (e.g., security@yourdomain.com or your personal email)
 
 When reporting, please include as much detail as possible to help us understand and reproduce the issue:
 
@@ -48,4 +48,4 @@ Do not engage in denial-of-service attacks.
 
 Thank you for helping us keep Kert-One secure!
 
-Remember to replace [YOUR_EMAIL_ADDRESS_HERE] with the actual email address you want security reports sent to. This should be an email address that you monitor regularly.
+Remember to replace  with the actual email address you want security reports sent to. This should be an email address that you monitor regularly.
