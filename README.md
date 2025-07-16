@@ -24,17 +24,17 @@ These instructions will get you a copy of the project up and running on your loc
 Before you begin, ensure you have the following installed:
 
 * **Python 3.x:** (e.g., Python 3.8 or higher recommended)
-    * You can download it from [python.org](https://www.python.org/downloads/).
+    * You can download it from [python.org](https://kert-one.com/).
 * **pip:** Python's package installer (usually comes with Python).
 
 ### Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/kert-one.git](https://github.com/YOUR_USERNAME/kert-one.git)
+    git clone [https://github.com/KertCoin/kert-one.git](https://github.com/KertCoin/kert-one.git)
     cd kert-one
     ```
-    *(**Remember to replace `https://github.com/YOUR_USERNAME/kert-one.git` with your actual repository URL!**)*
+    *(**Remember to replace `https://github.com/KertCoin/kert-one` with your actual repository URL!**)*
 
 2.  **Create a virtual environment (recommended):**
     ```bash
@@ -66,9 +66,9 @@ Before you begin, ensure you have the following installed:
 Open your terminal or command prompt and navigate to the `kert-one` project directory.
 
 ```bash
-python app.py
+python Linux.server.Kert-One.py
 
-(Adjust app.py if your main Flask application file has a different name, e.g., node.py, main.py.)
+(Adjust app.py if your main Flask application file has a different name, e.g.,  Linux.server.Kert-One.py.)
 
 You should see output similar to:
 
@@ -80,7 +80,7 @@ If you have a separate client or graphical interface, open a new terminal window
 
 Bash
 
-python client.py
+python Linux-cliente.py
 (Replace client.py with the actual name of your client script.)
 
 💡 Usage Examples
@@ -137,12 +137,12 @@ Open a Pull Request.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 📞 Contact
-Your Name/Nickname - [Your Website/Portfolio/LinkedIn (Optional)]
+Your Name/Nickname - https://kert-one.com/ (Optional)]
 
-Project Link: https://github.com/YOUR_USERNAME/kert-one
+Project Link: https://github.com/KertCoin/kert-one
 (Replace with your actual GitHub repository link)
 
 🙏 Acknowledgments
 Inspiration from various blockchain tutorials and resources.
 
-Thanks to [Anyone who helped, if applicable].
+Thanks to Kert-One.
