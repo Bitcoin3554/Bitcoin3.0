@@ -1,0 +1,75 @@
+{
+  "id": "3388000000022947401.genericClass10",
+  "issuerName": "BTC3",
+  "reviewStatus": "underReview",
+  "hexBackgroundColor": "#1a1a2e",
+  "hexFontColor": "#FFFFFF",
+  "logo": {
+    "sourceUri": {
+      "uri": "http://c1.numsoclick.com.br:25500/btc3.png?v=2",
+      "description": "Logo BTC3"
+    }
+  },
+  "heroImage": {
+    "sourceUri": {
+      "uri": "http://c1.numsoclick.com.br:25500/btc3.png?v=2",
+      "description": "Fundo Cartão BTC3"
+    }
+  },
+  "textModulesData": [
+    {
+      "header": "Cartão BTC3",
+      "body": "Use este cartão para pagamentos digitais com a moeda BTC3.",
+      "headerColor": "#FFD700",
+      "bodyColor": "#FFFFFF"
+    }
+  ],
+  "fields": [
+    {
+      "name": "numero_cartao",
+      "label": "Número do Cartão",
+      "kind": "TEXT"
+    },
+    {
+      "name": "validade",
+      "label": "Validade",
+      "kind": "TEXT"
+    },
+    {
+      "name": "cvv",
+      "label": "CVV",
+      "kind": "TEXT"
+    },
+    {
+      "name": "saldo",
+      "label": "Saldo",
+      "kind": "TEXT"
+    }
+  ],
+  "primaryFields": [
+    {
+      "name": "numero_cartao",
+      "label": "Número do Cartão"
+    }
+  ],
+  "secondaryFields": [
+    {
+      "name": "validade",
+      "label": "Validade"
+    },
+    {
+      "name": "saldo",
+      "label": "Saldo"
+    }
+  ],
+  "imageModulesData": [
+    {
+      "mainImage": {
+        "sourceUri": {
+          "uri": "http://c1.numsoclick.com.br:25500/btc3.png",
+          "description": "Logo BTC3"
+        }
+      }
+    }
+  ]
+}

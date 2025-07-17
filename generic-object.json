@@ -1,0 +1,69 @@
+{
+  "id": "3388000000022947401.genericObject10",
+  "classId": "3388000000022947401.genericClass10",
+  "state": "ACTIVE",
+  "cardTitle": {
+    "defaultValue": {
+      "language": "pt-BR",
+      "value": "Cartão Débito/Crédito BTC3"
+    }
+  },
+  "header": {
+    "defaultValue": {
+      "language": "pt-BR",
+      "value": "BTC3 Wallet"
+    }
+  },
+  "heroImage": {
+    "sourceUri": {
+      "uri": "http://c1.numsoclick.com.br:25500/btc3.png",
+      "description": "Fundo elegante do cartão BTC3"
+    }
+  },
+  "logo": {
+    "sourceUri": {
+      "uri": "https://blockspot.io/wp-content/uploads/bitcoin-3-btc3-coin-logo.png",
+      "description": "Logo BTC3"
+    }
+  },
+  "fields": [
+    {
+      "name": "numero_cartao",
+      "value": "1234 5678 9012 3456"
+    },
+    {
+      "name": "validade",
+      "value": "12/30"
+    },
+    {
+      "name": "cvv",
+      "value": "123"
+    },
+    {
+      "name": "saldo",
+      "value": "0.12345678 BTC3"
+    }
+  ],
+  "textModulesData": [
+    {
+      "header": "Detalhes do Cartão",
+      "body": "Número: 1234 5678 9012 3456\nValidade: 12/30\nSaldo disponível: 0.12345678 BTC3",
+      "headerColor": "#FFD700",
+      "bodyColor": "#FFFFFF"
+    }
+  ],
+  "barcode": {
+    "type": "qrCode",
+    "value": "1234567890123456",
+    "alternateText": "Escaneie para pagar"
+  },
+  "hexBackgroundColor": "#1a1a2e",
+  "hexFontColor": "#FFFFFF",
+  "uris": [
+    {
+      "kind": "walletobjects#uri",
+      "uri": "https://bitcoin.btc3-explorer.com/nfc?wallet_address=1234567890123456",
+      "description": "Pagar usando NFC"
+    }
+  ]
+}

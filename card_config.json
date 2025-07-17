@@ -1,0 +1,24 @@
+{
+  "id": "3388000000022947401.objectId123",
+  "classId": "3388000000022947401.loyaltyClass123",
+  "state": "active",
+  "accountId": "1234567890",
+  "accountName": "Nome do Usuário",
+  "loyaltyPoints": {
+    "balance": {
+      "string": "500"
+    },
+    "label": "Points"
+  },
+  "textModulesData": [
+    {
+      "header": "Detalhes do Cartão",
+      "body": "Número: 1234 5678 9012 3456\nValidade: 12/25\nCVV: 123"
+    }
+  ],
+  "barcode": {
+    "type": "qrCode",
+    "value": "1234567890123456",
+    "alternateText": "1234 5678 9012 3456"
+  }
+}
